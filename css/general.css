@@ -85,6 +85,16 @@
 
 }
 
+@font-face {
+    font-family: "CenturyGothicRegular";
+    src: url("../fonts/CenturyGothicRegular.eot");
+    src: url("../fonts/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CenturyGothicRegular.woff") format("woff"),
+    url("../fonts/CenturyGothicRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 /*General styles*/
 html, body                    {    height: 100%;}
 body                          {    margin: 0;
@@ -250,6 +260,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                             width: 98%;
                         }
 .apartmentInfo h4       {
+                            font-family: "CenturyGothicRegular";
                             color: #FFF;
                             text-transform: uppercase;
                             -webkit-transition: all .2s;
