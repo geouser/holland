@@ -50,11 +50,17 @@ $(function(){
 
 jQuery(document).ready(function($) {
 
+$('.apartment.visible').find('.apartmentInfoWrap ul').fadeIn('slow');
+
 $('.apartment').hover(function(){
-  $(this).css('width', '58%');
+  $(this).css('width', '58%').addClass('visible').removeClass('hid').siblings().removeClass('visible').addClass('hid');
   $(this).siblings('.apartment').css('width', '21%');
-  $(this).find('.apartmentInfo ul').fadeToggle('fast')
-})
+  if ($(this).hasClass('visible')) {
+    $(this).find('.apartmentInfoWrap ul').fadeIn('slow');
+    $(this).siblings().find('.apartmentInfoWrap ul').fadeOut('fast')
+  } 
+});
+
 
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
