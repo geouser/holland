@@ -94,6 +94,18 @@
     font-style: normal;
     font-weight: normal;
 }
+@font-face {
+    font-family:'CenturyGothic-Bold';
+    src: url('../fonts/CenturyGothic-Bold_gdi.eot');
+    src: url('../fonts/CenturyGothic-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CenturyGothic-Bold_gdi.woff') format('woff'),
+        url('../fonts/CenturyGothic-Bold_gdi.ttf') format('truetype'),
+        url('../fonts/CenturyGothic-Bold_gdi.svg#CenturyGothic-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-F003;
+}
 
 /*General styles*/
 html, body                    {    height: 100%;}
@@ -252,6 +264,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                             position: relative;
                             z-index: 10;
                             text-align: center;
+                            font-family: "CenturyGothicRegular";
                         }
 .apartmentInfoWrap      {
                             display: inline-block;
@@ -259,8 +272,9 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                             width: 98%;
                         }
 .apartmentInfo h4       {
-                            font-family: "CenturyGothicRegular";
                             color: #FFF;
+                            font-size: 40px;
+                            font-weight: 400;
                             text-transform: uppercase;
                             -webkit-transition: all .2s;
                             -moz-transition: all .2s;
@@ -268,9 +282,8 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                             -o-transition: all .2s;
                             transition: all .2s;
                         }
-.apartmentInfo table    {
-                            display: none;
-                            text-align: center;
-                        }
-.apartmentInfo table td {    color: #FFF }
+.apartmentInfo h4 span  {   display: block;
+ font-size: 18px;
+font-family:'CenturyGothic-Bold';
+ }
 /*---------------------------------------------------------------*/
