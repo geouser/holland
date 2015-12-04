@@ -79,6 +79,22 @@ $('.apartment').hover(function(){
     $.magnificPopup.close();
   });
 
+
+  function falseHover(el){
+    $(el).toggleClass('hover').siblings().removeClass('hover');
+  }
+
+  $('.false_hover').on('click', function(event) {
+    event.preventDefault();
+    if (params.isMobile) falseHover(this);
+  });
+
+  $('.about_slider').slick({
+    arrows: false,
+    dots: true
+  });
+
+
 });
 
 
