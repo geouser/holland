@@ -98,7 +98,8 @@ body                          {    margin: 0;
 p                             {    color: #000;}
 h1, h2, h3, h4, h5, p         {    margin: 0;}
 a                             {    text-decoration: none;}
-strong                        {    font-weight: 900;}
+strong                        {    font-family: 'robotomedium'}
+em                            {    font-style: italic;}
 ul                            {    padding: 0;}
 *                             {    box-sizing: border-box; outline: none;}
 *:focus                       {    outline: none;}
@@ -263,3 +264,16 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                         }
 .apartmentInfo table td {    color: #FFF }
 /*---------------------------------------------------------------*/
+
+
+
+/*--------------------------- About slide -------------------------*/
+.section                { height: 100%;}
+.right_side             { width: 50%; height: 100%; float: right;}
+.left_side              { width: 50%; height: 100%; float: left;}
+
+.about_1__house         { width: 100%;
+                            height: 33.33%;
+                            background-size: cover;
+                            background-position: 0% 50%;
+                            background-repeat: no-repeat;}
