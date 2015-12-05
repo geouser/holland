@@ -250,8 +250,8 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 .offer h1:after {
     content: "";
     display: block;
-    width: 750px;
-    height: 320px;
+    width: 180%;
+    height: 200%;
     position: absolute; z-index: -1;
     left: -100%;
     right: -100%;
