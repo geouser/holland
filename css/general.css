@@ -314,9 +314,9 @@ font-family:'CenturyGothic-Bold';
                             margin: 0 auto;
                             text-align: left;}
 .about > .left_side     { background-image: url(../images/about/bg.jpg);
-                            background-size: 100%;
+                            background-size: 230%;
                             background-repeat: no-repeat;
-                            background-position: 50% 100%;}
+                            background-position: 5% 100%;}
 .about article          { padding-top: 10%;}                            
 .about article h2       { font-family: "CenturyGothicRegular";
                             font-size: 55px;
@@ -343,7 +343,8 @@ font-family:'CenturyGothic-Bold';
                             display: block;
                             border: 1px solid #3b4a78;
                             border-left-width: 0;
-                            border-right-width: 0;}
+                            border-right-width: 0;
+                            background-color: #fff;}
 
 .order_view             { width: 280px;
                             height: 50px;
@@ -396,9 +397,9 @@ font-family:'CenturyGothic-Bold';
                             opacity: 0;
                             overflow: hidden;
                             background-image: url(../images/about/content-decor.png);
-                            background-size: 100%;
+                            background-size: auto 11%;
                             background-repeat: no-repeat;
-                            background-position: 50% 100%;}
+                            background-position: 50% 98%;}
 .about__house .wrap     { vertical-align: middle; display: inline-block;}
 .about__house h2        { font-size: 40px;
                             color: #fff;
@@ -483,7 +484,11 @@ font-family:'CenturyGothic-Bold';
                                     -o-transition: all 0.3s ease;
                                     transition: all 0.3s ease;
                                     opacity: 0;
-                                    z-index: -1;}
+                                    z-index: -1;
+                                    background-image: url(../images/about/content-decor.png);
+                                    background-size: auto 11%;
+                                    background-repeat: no-repeat;
+                                    background-position: 50% 98%;}
 
 .about_2 .about__house .box:hover:after,
 .about_2 .about__house .box.hover:after {opacity: 1}
@@ -491,12 +496,14 @@ font-family:'CenturyGothic-Bold';
 
 @media (max-width: 1600px) {
     .about .wrapper                     { width: 86%;}
+    .order_view                         { width: auto; padding: 0 20px; height: 35px; font-size: 13px;}
+    .order_view img                     { width: 15px; height: 15px;}
 
     .about article                      { padding-top: 5%;}
     .about article h2                   { font-size: 40px; margin-bottom: 20px;}
     .about article p                    { font-size: 16px;}
     .about article p.main               { font-size: 18px; margin-top: 20px;}
-    .about article p.main span          { padding: 10px 0;}
+    .about article p.main span          { padding: 10px 0; line-height: 20px;}
 
     .about__house h2                    { font-size: 30px;}
     .about__house address               { margin-bottom: 10px;}
@@ -511,8 +518,11 @@ font-family:'CenturyGothic-Bold';
                                             line-height: 66px;
                                             font-size: 30px;}
 
-
-    .about_2 .about__house h2           { font-size: 25px;}
+    .about_2 .content h2                { width: 24%;}
+    .about_2 .content .info             { width: 74%}
+    .about_2 .about__house h2           { font-size: 20px; line-height: 22px;}
+    .about_slider                       { margin-bottom: 20px;}
     .about_slider p                     { font-size: 13px; line-height: 15px;}
+    .about_slider .slick-dots           { bottom: -20px; margin: 0;}
 }
 
