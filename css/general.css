@@ -996,5 +996,9 @@ margin: 15px 0;
     .section.history .wrapper           { width: 86%; padding-top: 5%;}
     .slide_row a .content               { font-size: 14px; font-family: 'robotomedium'}
     .slide_row a .content:before        { width: 25px; height: 25px;}
+
+    .section.history h2                 { font-size: 40px;}
+    .history_slider p                   { font-size: 16px;}
+    .section.history h3                 { font-size: 18px; margin-bottom: 20px;}
 }
 
