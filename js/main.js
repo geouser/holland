@@ -131,6 +131,11 @@ $(".slideNav li").click(function(e){
     dots: true
   });
 
+  $('.history_slider').slick({
+    arrows: false,
+    dots: true
+  });
+
 
 });
 
