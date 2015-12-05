@@ -90,6 +90,27 @@ $(".slideNav li").click(function(e){
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  $('.gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    overflowY: 'auto',
+    fixedContentPos: false,
+    fixedBgPos: true,
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'my-mfp-slide-bottom',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.attr('alt');
+      }
+    }
+  });
+
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
