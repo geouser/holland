@@ -19,7 +19,7 @@ $(function(){
 });
 
 
-// Απΰσηεπ Internet Explorer?
+// ΓΓ°Γ Γ³Γ§Γ¥Γ° Internet Explorer?
 $(function(){
   if (navigator.appName == 'Microsoft Internet Explorer') {
     var ua = navigator.userAgent;
@@ -64,6 +64,12 @@ $('.apartment').hover(function(){
 $('.offerSlider').slick({
   fade: true,
   arrows: false
+});
+
+$(".slideNav li").click(function(e){
+    e.preventDefault();
+    slideIndex = $(this).index();
+    $('.offerSlider').slick('slickGoTo', slideIndex);
 });
 
 /*-----------------------------------------------------------------*/  
