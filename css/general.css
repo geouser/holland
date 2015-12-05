@@ -884,14 +884,46 @@ margin: 15px 0;
 /*------------------------- History slide --------------------------*/
 
 
-.section.history .right_side            { padding-top: 10%;}
+.section.history .right_side            { background-image: url(../images/history/history_bg.jpg);
+                                            background-size: 100%;
+                                            background-position: 50% 100%;
+                                            background-repeat: no-repeat;}
 .section.history h2                     {  font-family: "CenturyGothicRegular";
                                             font-size: 55px;
                                             text-transform: uppercase;
                                             font-weight: normal;
+                                            color: #292929;
+                                            line-height: 55px;
+                                            margin-bottom: 10px;}
+.section.history h3                     { font-family: 'robotolight';   
+                                            font-size: 22px;
+                                            color: #304071;
+                                            line-height: 26px;
+                                            text-transform: uppercase;
+                                            margin-bottom: 50px;}
+.section.history .wrapper               { width: 73%; margin: 0 auto; text-align: left; padding-top: 10%;}
+
+.history_slider h4                      { font-family: 'robotobold';
+                                            font-size: 18px;
+                                            color: #292929;
+                                            margin-bottom: 25px;}
+.history_slider p                       { font-family: 'robotolight';
+                                            font-size: 18px;
                                             color: #292929;}
-
-
+.history_slider .slick-dots             { text-align: left;}
+.history_slider .slick-dots li          { margin: 0; width: 30px; text-align: left;}
+.history_slider .slick-dots li button   {padding: 0; text-align: left;}
+.history_slider .slick-dots li button:before {color: #304071; font-size: 12px; text-align: left;}
+.history_slider:before                  { content: " ";
+                                            width: 41px;
+                                            height: 12px;
+                                            background-image: url(../images/arrow.png);;
+                                            background-size: 100% 100%;
+                                            background-repeat: no-repeat;
+                                            background-position: 50% 50%;
+                                            position: absolute;
+                                            top: 7px;
+                                            right: 101%;}
 
 
 .slide_row                              { height: 33.333%; width: 100%; border-bottom: 1px solid #fff;}
@@ -908,9 +940,9 @@ margin: 15px 0;
 .slide_row-1 a:nth-child(1)             { width: 33.333%; border-right: 1px solid #fff;}
 .slide_row-1 a:nth-child(2)             { width: 66.666%;}
 
-.slide_row-2 a:nth-child(1)             { width: 25%; border-right: 1px solid #fff;}
-.slide_row-2 a:nth-child(2)             { width: 50%; border-right: 1px solid #fff;}
-.slide_row-2 a:nth-child(3)             { width: 25%;}
+.slide_row-2 a:nth-child(1)             { width: 27%; border-right: 1px solid #fff;}
+.slide_row-2 a:nth-child(2)             { width: 46%; border-right: 1px solid #fff;}
+.slide_row-2 a:nth-child(3)             { width: 27%;}
 
 .slide_row-3 a:nth-child(1)             { width: 60%; border-right: 1px solid #fff;}
 .slide_row-3 a:nth-child(2)             { width: 40%;}
@@ -961,6 +993,7 @@ margin: 15px 0;
 
 
 @media (max-width: 1600px)  {
+    .section.history .wrapper           { width: 86%; padding-top: 5%;}
     .slide_row a .content               { font-size: 14px; font-family: 'robotomedium'}
     .slide_row a .content:before        { width: 25px; height: 25px;}
 }
