@@ -120,7 +120,8 @@ body                          {    margin: 0;
 p                             {    color: #000;}
 h1, h2, h3, h4, h5, p         {    margin: 0;}
 a                             {    text-decoration: none;}
-strong                        {    font-weight: 900;}
+strong                        {    font-family: 'robotomedium'; font-weight: normal;}
+em                            {    font-style: normal;}
 ul                            {    padding: 0;}
 *                             {    box-sizing: border-box; outline: none;}
 *:focus                       {    outline: none;}
@@ -167,18 +168,134 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 @media (max-width: 360px) {
 }
 
-
+.href   {
+    display: inline-block;
+    vertical-align: middle;
+    height: 45px; line-height: 43px;
+    padding: 0 25px;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    background-color: #FFF;
+    font-size: 15px; font-family: 'robotobold';;
+    color: #3B4A78;
+    text-align: center;
+    position: relative;
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+        -ms-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+}
+.href * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.href img {
+    margin-right: 7px;
+}
+.href.blue {
+    background-color: #3B4A78;
+    color: #fff;
+}
+.href:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #B2AF7E;
+  height: 4px;
+  -webkit-transition: all .3s ease-out;
+     -moz-transition: all .3s ease-out;
+      -ms-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+}
+.href:hover:before, .href:focus:before, .href:active:before {
+  left: 0;
+  right: 0;
+}
+.href.blue:before {
+  background: #fff; 
+}
 /* --------------------------------------
    Custom Styles
    -------------------------------------- */
 
 
+/* --------------------------------------
+   Offer
+   -------------------------------------- */
+.offer {
+    position: relative;
+}
+.offerSlider {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+}
+.slide {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: url("../images/slider/slide-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+    height: 100%;
+}
+
+.slideInfo {
+    position: absolute;
+    width: 510px;
+    right: 15%;
+    bottom: 40px;
+    padding: 0 0 65px 0;
+    background-color: rgba(255,255,255, .9);
+}
+.slideInfoHeader {
+    padding: 40px;
+    background-color: rgba(48,64,113, .9);
+}
+.slideInfoHeader  p {
+    font: 18px 'robotomedium';
+    color: #FFF;
+    margin-bottom: 20px;
+    line-height: 22px;
+}
+.slideInfoBody {
+    padding: 40px 40px 0 40px;
+}
+.slideInfoBody p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #333;
+    margin-bottom: 30px;
+}
+a.place {
+    color: #304071;
+    text-decoration: underline;
+}
+/* --------------------------------------
+   Choose Apartment
+   -------------------------------------- */
 
 .chooseApart     {
                      height: 100vh;
                      min-height: 600px;
                      position: relative;
                      width: 100%;
+                     overflow: hidden;
+                     background-image: url("../images/3-2.jpg");
+                     background-position: 50% 50%;
+                     -webkit-background-size: cover;
+                          -o-background-size: cover;
+                             background-size: cover;
                  }
 .ornLine         {
                      display: block;
@@ -190,10 +307,23 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                      right: -100%;
                      margin: auto;
                  }
+.chooseApartTitle {
+    width: 100%;
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 0; left: 0;
+    height: 110px;
+    text-transform: uppercase;
+    color: #FFF;
+    font: 55px/105px "CenturyGothicRegular";
+    text-align: center;
+    background-color: #FFF;
+    background-color: rgba( 148, 146, 114, .8);
+}
 .apartment       {
                      float: left;
                      height: 100%;
-                     cursor: pointer;
                      position: relative;
                      text-align: center;
                      -webkit-transition: all .3s;
@@ -204,6 +334,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                      width: 20%;
                      overflow: hidden;
                  }
+
 .apartment:after {
                      content: "";
                      display: block;
@@ -232,7 +363,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                      -o-transition: all .2s;
                      transition: all .2s;
                  }
-.apartment img   {
+.apartmentBg    {
                      position: absolute;
                      min-width: 100%;
                      height: 100%;
@@ -282,77 +413,306 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                             -ms-transition: all .2s;
                             -o-transition: all .2s;
                             transition: all .2s;
-}
+                           }
+                        @-webkit-keyframes smooth {
+                            0%   {top: 0px;}
+                            10%  {top: -20px;}
+                            100% {top: 0px;}
+                        }
+                        @keyframes smooth {
+                            0%   {top: 0px;  opacity: 0;}
+                            10%  {top: -10px;  opacity: 0;}
+                            100% {top: 0px;  opacity: 1;}
+                        }
+                        @-webkit-keyframes smoothLeave {
+                            0%     {top: 0px; opacity: 0;}
+                            50%    {top: -20px; opacity: 0;}
+                            100%   {top: 0; opacity: 1;}
+                        }
+                        @keyframes smoothLeave {
+                            0%     {top: 0px; opacity: 0;}
+                            50%    {top: -20px; opacity: 0;}
+                            100%   {top: 0; opacity: 1;}
+                        }
 
-@-webkit-keyframes smooth {
-    0%   {top: 0px;}
-    10%  {top: -20px;}
-    100% {top: 0px;}
-}
-@keyframes smooth {
-    0%   {top: 0px;  opacity: 0;}
-    10%  {top: -10px;  opacity: 0;}
-    100% {top: 0px;  opacity: 1;}
-}
-@-webkit-keyframes smoothLeave {
-    0%     {top: 0px; opacity: 0;}
-    50%    {top: -20px; opacity: 0;}
-    100%   {top: 0; opacity: 1;}
-}
-@keyframes smoothLeave {
-    0%     {top: 0px; opacity: 0;}
-    50%    {top: -20px; opacity: 0;}
-    100%   {top: 0; opacity: 1;}
-}
-.apartment.visible .apartmentInfo h4 {    
-    -webkit-animation: smooth 1s; 
-    animation: smooth 1s;
-}
-.apartment.hid .apartmentInfo h4 {    
-    -webkit-animation: smoothLeave .6s; 
-    animation: smoothLeave .6s;
-}
-
-.apartmentInfo h4 span  {   
-  display: block;
- font-size: 18px;
- }
-
-.apartmentInfo ul {
-    list-style-type: none;
-    display: none;     
- }
-
-.row {
-    margin-top: 1px solid #fff;
-    display: inline-block;
-    border-bottom: 1px solid #fff;
-    padding: 2px 0 8px;
- }
-.row:nth-child(1) {
-    border-top: 1px solid #fff;
-}
-.row li {
-    display: inline-block;
-    font-size: 24px;
-    text-align: left;
-    color: #FFF;
-    margin-right: 60px;
- }
-.row li:last-child {
-     margin-right: 0;
- }
-.row li:nth-child(2) {
-    font-family:'CenturyGothic-Bold';
-} 
-.row li:nth-child(3) a {
-    color: #ADAB89;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-}  
+.apartment.visible .apartmentInfo h4 {
+                                         -webkit-animation: smooth 1s;
+                                         animation: smooth 1s;
+                                     }
+.apartment.hid .apartmentInfo h4     {
+                                         -webkit-animation: smoothLeave .6s;
+                                         animation: smoothLeave .6s;
+                                     }
 
 
+.apartmentInfo h4 span               {
+                                         display: block;
+                                         font-size: 18px;
+                                     }
+.apartmentInfo ul                    {
+                                         list-style-type: none;
+                                         display: none;
+                                         width: 640px;
+                                         margin: 0 auto;
+                                         margin-top: 40px;
+                                     }
+.row                                 {
+                                         margin-top: 1px solid #fff;
+                                         display: inline-block;
+                                         border-bottom: 1px solid #fff;
+                                         padding: 2px 0 8px;
+                                         text-align: left;
+                                         width: 100%;
+                                     }
+.row:nth-child(1)                    {    border-top: 1px solid #fff }
+.row li                              {
+                                         display: inline-block;
+                                         font-size: 24px;
+                                         text-align: left;
+                                         color: #FFF;
+                                         margin-right: 60px;
+                                     }
+.row li:last-child                   {    margin-right: 0 }
+.row li:nth-child(2)                 {    font-family: 'CenturyGothic-Bold' }
+.row li a                            {
+                                         color: #ADAB89;
+                                         text-decoration: underline;
+                                         text-decoration-style: dashed;
+                                     }
+span.apartTip               {  display: block;
+font: 14px "CenturyGothicRegular";
+font-style: italic;
+text-align: center;
+color: #AFB3BB;
+margin: 15px 0;
+}
+.apartmentInfo .href {
+    margin: 50px 4px 0;
+}
 @media (max-width: 1500px) {
-    .ornLine    {height: 40px;}
+    .ornLine           {height: 40px;}
+    .chooseApartTitle  {height: 70px; line-height: 65px; font-size: 38px;}
 }
 /*---------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------*/
+
+
+
+/*--------------------------- About slide -------------------------*/
+.section                { height: 100%; overflow: hidden;}
+.right_side             { width: 50%; height: 100%; float: right;}
+.left_side              { width: 50%; height: 100%; float: left;}
+
+.about__house           { width: 100%;
+                            height: 33.33%;
+                            background-size: cover;
+                            background-position: 0% 50%;
+                            background-repeat: no-repeat;}
+.about .wrapper         { width: 73%;
+                            margin: 0 auto;
+                            text-align: left;}
+.about > .left_side     { background-image: url(../images/about/bg.jpg);
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 100%;}
+.about article          { padding-top: 10%;}                            
+.about article h2       { font-family: "CenturyGothicRegular";
+                            font-size: 55px;
+                            text-transform: uppercase;
+                            font-weight: normal;
+                            color: #292929;
+                            margin-bottom: 35px;}
+.about article p        { font-family: 'robotolight';
+                            font-size: 18px;
+                            line-height: 22px;
+                            color: #292929;}
+
+.about article p.main   { margin-top: 60px;
+                            border: 3px solid #3b4a78;
+                            border-left-width: 0;
+                            border-right-width: 0;
+                            padding: 3px 0;
+                            font-size: 23px;
+                            line-height: 32px;
+                            font-family: 'robotolight_italic';
+                            color: #3b4a78}
+.about article p.main em   {font-family: 'robotomedium_italic'}
+.about article p.main span {padding: 23px 0;
+                            display: block;
+                            border: 1px solid #3b4a78;
+                            border-left-width: 0;
+                            border-right-width: 0;}
+
+.order_view             { width: 280px;
+                            height: 50px;
+                            background-color: #3b4a78;
+                            color: #fff;
+                            font-family: 'robotobold';
+                            font-size: 18px;
+                            border: none;
+                            border-radius: 4px;
+                            -webkit-transition: all 0.3s ease;
+                            -o-transition: all 0.3s ease;
+                            transition: all 0.3s ease;}
+.order_view:hover       { background-color: #949272;}
+.about .order_view      { margin-top: 20px;}
+.order_view i           { display: inline-block; vertical-align: middle; margin-right: 5px; margin-top: -3px;}
+.order_view span        { vertical-align: middle;}
+
+
+.about__house           { position: relative;}
+.about__house .num      { display: block;
+                            height: 88px;
+                            width: 88px;
+                            position: absolute;
+                            left: -44px;
+                            top: 50%;
+                            margin-top: -44px;
+                            background-image: url(../images/about/romb.png);
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                            text-align: center;
+                            font-size: 40px;
+                            color: #fff;
+                            font-family: 'robotothin';
+                            line-height: 88px;
+                            z-index: 2;}
+
+
+.about__house *         { -webkit-transition: all 0.3s ease;
+                          -o-transition: all 0.3s ease;
+                          transition: all 0.3s ease;}
+.about__house .content  { position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            background-color: rgba(59, 74, 120, 0.8);
+                            top: 0;
+                            padding-left: 6.2%;
+                            z-index: -1;
+                            opacity: 0;
+                            overflow: hidden;
+                            background-image: url(../images/about/content-decor.png);
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 100%;}
+.about__house .wrap     { vertical-align: middle; display: inline-block;}
+.about__house h2        { font-size: 40px;
+                            color: #fff;
+                            font-weight: normal;
+                            font-family: "CenturyGothicRegular";
+                            text-transform: uppercase;
+                            line-height: 20px;
+                            margin-bottom: 5px;}
+.about__house>h2        { display: inline-block; vertical-align: middle; width: 95%; padding-left: 6.2%;}
+.about__house address   { color: #fff;
+                            font-family: 'robotothin';
+                            font-size: 15px;
+                            line-height: 20px;
+                            font-style: normal;
+                            text-decoration: underline;
+                            margin-bottom: 35px;}
+.about__house p         { color: #fff;
+                            font-family: 'robotothin';
+                            font-size: 15px;
+                            line-height: 22px;
+                            margin-bottom: 35px;}
+.about__house button    { display: inline-block;
+                            vertical-align: middle;
+                            height: 43px;
+                            padding: 0 20px;
+                            background-color: #fff;
+                            border: none;
+                            -webkit-transition: all 0.3s ease;
+                            -o-transition: all 0.3s ease;
+                            transition: all 0.3s ease;
+                            color: #3b4a78;
+                            cursor: pointer;
+                            font-family: 'robotobold';
+                            border-radius: 4px;
+                            font-size: 15px;
+                            margin-right: 4px;}
+.about__house button:hover { opacity: 0.8;}
+
+.about__house button img   {display: inline-block; vertical-align: middle; margin-right: 8px;}
+.about__house button span  {display: inline-block; vertical-align: middle;}
+
+.about__house:hover > h2,
+.about__house.hover > h2      { display: none;}
+
+.about__house:hover .content,
+.about__house.hover .content  { opacity: 1; z-index: 1;}
+
+
+
+
+
+.about_2 .about__house h2     { font-size: 30px;
+                                line-height: 32px;}
+.about_2 .content h2          { display: inline-block; width: 29%; margin: 0 -2px; vertical-align: middle; padding-right: 20px;}
+.about_2 .content .info       { display: inline-block; width: 69%; margin: 0 -2px; vertical-align: middle;}
+
+
+.about_slider                 { margin-bottom: 35px;}
+.about_slider p               { margin-bottom: 0;}
+.about_slider .slick-dots     { text-align: left;}
+.about_slider .slick-dots li  { margin: 0; width: 30px; text-align: left;}
+.about_slider .slick-dots li button {padding: 0; text-align: left;}
+.about_slider .slick-dots li button:before {color: #fff; font-size: 12px; text-align: left;}
+
+.about_2 .about__house .box   { position: relative;
+                                background-size: cover;
+                                background-position: 50% 50%;
+                                background-repeat: no-repeat;
+                                z-index: 1;}
+.about_2 .about__house .box h2 {vertical-align: middle;
+                                display: inline-block;
+                                width: 95%;
+                                padding-left: 12.4%;}
+.about_2 .about__house .box:after {content: " ";
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    background-color: rgba(59, 74, 120, 0.8);
+                                    -webkit-transition: all 0.3s ease;
+                                    -o-transition: all 0.3s ease;
+                                    transition: all 0.3s ease;
+                                    opacity: 0;
+                                    z-index: -1;}
+
+.about_2 .about__house .box:hover:after,
+.about_2 .about__house .box.hover:after {opacity: 1}
+
+
+@media (max-width: 1600px) {
+    .about .wrapper                     { width: 86%;}
+
+    .about article                      { padding-top: 5%;}
+    .about article h2                   { font-size: 40px; margin-bottom: 20px;}
+    .about article p                    { font-size: 16px;}
+    .about article p.main               { font-size: 18px; margin-top: 20px;}
+    .about article p.main span          { padding: 10px 0;}
+
+    .about__house h2                    { font-size: 30px;}
+    .about__house address               { margin-bottom: 10px;}
+    .about__house p                     { line-height: 18px; margin-bottom: 10px;}
+    .about__house button                { height: 35px; padding: 0 15px; font-size: 13px;}
+    .about__house button img            { width: 15px; height: 15px;}
+
+    .about__house .num                  { width: 66px;
+                                            height: 66px;
+                                            margin-top: -33px;
+                                            left: -33px;
+                                            line-height: 66px;
+                                            font-size: 30px;}
+
+
+    .about_2 .about__house h2           { font-size: 25px;}
+    .about_slider p                     { font-size: 13px; line-height: 15px;}
+}
+

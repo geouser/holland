@@ -61,6 +61,10 @@ $('.apartment').hover(function(){
   } 
 });
 
+$('.offerSlider').slick({
+  fade: true,
+  arrows: false
+});
 
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
@@ -84,6 +88,22 @@ $('.apartment').hover(function(){
     e.preventDefault();
     $.magnificPopup.close();
   });
+
+
+  function falseHover(el){
+    $(el).toggleClass('hover').siblings().removeClass('hover');
+  }
+
+  $('.false_hover').on('click', function(event) {
+    event.preventDefault();
+    if (params.isMobile) falseHover(this);
+  });
+
+  $('.about_slider').slick({
+    arrows: false,
+    dots: true
+  });
+
 
 });
 
