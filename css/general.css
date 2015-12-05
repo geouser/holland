@@ -168,12 +168,122 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 @media (max-width: 360px) {
 }
 
-
+.href   {
+    display: inline-block;
+    vertical-align: middle;
+    height: 45px; line-height: 43px;
+    padding: 0 25px;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    background-color: #FFF;
+    font-size: 15px; font-family: 'robotobold';;
+    color: #3B4A78;
+    text-align: center;
+    position: relative;
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+        -ms-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+}
+.href * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.href img {
+    margin-right: 7px;
+}
+.href.blue {
+    background-color: #3B4A78;
+    color: #fff;
+}
+.href:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #B2AF7E;
+  height: 4px;
+  -webkit-transition: all .3s ease-out;
+     -moz-transition: all .3s ease-out;
+      -ms-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+}
+.href:hover:before, .href:focus:before, .href:active:before {
+  left: 0;
+  right: 0;
+}
+.href.blue:before {
+  background: #fff; 
+}
 /* --------------------------------------
    Custom Styles
    -------------------------------------- */
 
 
+/* --------------------------------------
+   Offer
+   -------------------------------------- */
+.offer {
+    position: relative;
+}
+.offerSlider {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+}
+.slide {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: url("../images/slider/slide-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+    height: 100%;
+}
+
+.slideInfo {
+    position: absolute;
+    width: 510px;
+    right: 15%;
+    bottom: 40px;
+    padding: 0 0 65px 0;
+    background-color: rgba(255,255,255, .9);
+}
+.slideInfoHeader {
+    padding: 40px;
+    background-color: rgba(48,64,113, .9);
+}
+.slideInfoHeader  p {
+    font: 18px 'robotomedium';
+    color: #FFF;
+    margin-bottom: 20px;
+    line-height: 22px;
+}
+.slideInfoBody {
+    padding: 40px 40px 0 40px;
+}
+.slideInfoBody p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #333;
+    margin-bottom: 30px;
+}
+a.place {
+    color: #304071;
+    text-decoration: underline;
+}
+/* --------------------------------------
+   Choose Apartment
+   -------------------------------------- */
 
 .chooseApart     {
                      height: 100vh;
@@ -181,6 +291,11 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                      position: relative;
                      width: 100%;
                      overflow: hidden;
+                     background-image: url("../images/3-2.jpg");
+                     background-position: 50% 50%;
+                     -webkit-background-size: cover;
+                          -o-background-size: cover;
+                             background-size: cover;
                  }
 .ornLine         {
                      display: block;
@@ -192,10 +307,23 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                      right: -100%;
                      margin: auto;
                  }
+.chooseApartTitle {
+    width: 100%;
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 0; left: 0;
+    height: 110px;
+    text-transform: uppercase;
+    color: #FFF;
+    font: 55px/105px "CenturyGothicRegular";
+    text-align: center;
+    background-color: #FFF;
+    background-color: rgba( 148, 146, 114, .8);
+}
 .apartment       {
                      float: left;
                      height: 100%;
-                     cursor: pointer;
                      position: relative;
                      text-align: center;
                      -webkit-transition: all .3s;
@@ -206,6 +334,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                      width: 20%;
                      overflow: hidden;
                  }
+
 .apartment:after {
                      content: "";
                      display: block;
@@ -234,7 +363,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                      -o-transition: all .2s;
                      transition: all .2s;
                  }
-.apartment img   {
+.apartmentBg    {
                      position: absolute;
                      min-width: 100%;
                      height: 100%;
@@ -256,17 +385,17 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                      right: 0;
                      left: 0;
                  }
-.apartment:hover:before {    opacity: 1 }
+.apartment.visible:before {    opacity: 1; }
 
 
 .apartmentInfo          {
                             display: inline-block;
                             height: 100%;
-                            width: 350px;
                             position: relative;
                             z-index: 10;
                             text-align: center;
                             font-family: "CenturyGothicRegular";
+                            width: 100%;
                         }
 .apartmentInfoWrap      {
                             display: inline-block;
@@ -278,22 +407,93 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                             font-size: 40px;
                             font-weight: 400;
                             text-transform: uppercase;
+                            position :relative;
                             -webkit-transition: all .2s;
                             -moz-transition: all .2s;
                             -ms-transition: all .2s;
                             -o-transition: all .2s;
                             transition: all .2s;
+                           }
+                        @-webkit-keyframes smooth {
+                            0%   {top: 0px;}
+                            10%  {top: -20px;}
+                            100% {top: 0px;}
                         }
-.apartmentInfo table    {
-                            display: none;
-                            text-align: center;
+                        @keyframes smooth {
+                            0%   {top: 0px;  opacity: 0;}
+                            10%  {top: -10px;  opacity: 0;}
+                            100% {top: 0px;  opacity: 1;}
                         }
-.apartmentInfo table td {    color: #FFF }
+                        @-webkit-keyframes smoothLeave {
+                            0%     {top: 0px; opacity: 0;}
+                            50%    {top: -20px; opacity: 0;}
+                            100%   {top: 0; opacity: 1;}
+                        }
+                        @keyframes smoothLeave {
+                            0%     {top: 0px; opacity: 0;}
+                            50%    {top: -20px; opacity: 0;}
+                            100%   {top: 0; opacity: 1;}
+                        }
 
-.apartmentInfo h4 span  {   display: block;
- font-size: 18px;
-font-family:'CenturyGothic-Bold';
- }
+.apartment.visible .apartmentInfo h4 {
+                                         -webkit-animation: smooth 1s;
+                                         animation: smooth 1s;
+                                     }
+.apartment.hid .apartmentInfo h4     {
+                                         -webkit-animation: smoothLeave .6s;
+                                         animation: smoothLeave .6s;
+                                     }
+
+
+.apartmentInfo h4 span               {
+                                         display: block;
+                                         font-size: 18px;
+                                     }
+.apartmentInfo ul                    {
+                                         list-style-type: none;
+                                         display: none;
+                                         width: 640px;
+                                         margin: 0 auto;
+                                         margin-top: 40px;
+                                     }
+.row                                 {
+                                         margin-top: 1px solid #fff;
+                                         display: inline-block;
+                                         border-bottom: 1px solid #fff;
+                                         padding: 2px 0 8px;
+                                         text-align: left;
+                                         width: 100%;
+                                     }
+.row:nth-child(1)                    {    border-top: 1px solid #fff }
+.row li                              {
+                                         display: inline-block;
+                                         font-size: 24px;
+                                         text-align: left;
+                                         color: #FFF;
+                                         margin-right: 60px;
+                                     }
+.row li:last-child                   {    margin-right: 0 }
+.row li:nth-child(2)                 {    font-family: 'CenturyGothic-Bold' }
+.row li a                            {
+                                         color: #ADAB89;
+                                         text-decoration: underline;
+                                         text-decoration-style: dashed;
+                                     }
+span.apartTip               {  display: block;
+font: 14px "CenturyGothicRegular";
+font-style: italic;
+text-align: center;
+color: #AFB3BB;
+margin: 15px 0;
+}
+.apartmentInfo .href {
+    margin: 50px 4px 0;
+}
+@media (max-width: 1500px) {
+    .ornLine           {height: 40px;}
+    .chooseApartTitle  {height: 70px; line-height: 65px; font-size: 38px;}
+}
+/*---------------------------------------------------------------*/
 
 
 /*---------------------------------------------------------------*/
