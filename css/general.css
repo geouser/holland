@@ -884,6 +884,16 @@ margin: 15px 0;
 /*------------------------- History slide --------------------------*/
 
 
+.section.history .right_side            { padding-top: 10%;}
+.section.history h2                     {  font-family: "CenturyGothicRegular";
+                                            font-size: 55px;
+                                            text-transform: uppercase;
+                                            font-weight: normal;
+                                            color: #292929;}
+
+
+
+
 .slide_row                              { height: 33.333%; width: 100%; border-bottom: 1px solid #fff;}
 .slide_row a                            { float: left;
                                             height: 100%;
@@ -955,10 +965,3 @@ margin: 15px 0;
     .slide_row a .content:before        { width: 25px; height: 25px;}
 }
 
-
-.history .right_side                    { padding-top: 10%;}
-.history h2                             {  font-family: "CenturyGothicRegular";
-                                            font-size: 55px;
-                                            text-transform: uppercase;
-                                            font-weight: normal;
-                                            color: #292929;}
