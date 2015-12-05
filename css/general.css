@@ -218,6 +218,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 .href.blue:before {
   background: #fff; 
 }
+
 /* --------------------------------------
    Custom Styles
    -------------------------------------- */
@@ -229,6 +230,98 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 .offer {
     position: relative;
 }
+.offer h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font: 55px/55px "CenturyGothicRegular";
+    text-transform: uppercase;
+    color: #FFF;
+    position: relative;
+    z-index: 10;
+    margin-left: 7.5%;
+    position: relative;
+    overflow: visible;
+}
+.offer h1 span {
+    text-transform: none;
+    font-size: 25px;
+    display: block;
+}
+.offer h1:after {
+    content: "";
+    display: block;
+    width: 750px;
+    height: 320px;
+    position: absolute; z-index: -1;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+background: rgb(30,87,153); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.5) 37%, rgba(255,252,252,0) 69%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%,rgba(0,0,0,.6) 0%,rgba(0,0,0, .5) 37%,rgba(255,252,252,0) 69%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(30,87,153,1) 0%,rgba(0,0,0, .6) 0%,rgba(0,0,0, .5) 37%,rgba(255,252,252,0) 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/* ----------- header--------- */
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(48,64,113, .9);
+    z-index: 100;
+}
+nav {
+    height: 100%;
+    float: left;
+    text-align: left;
+    width: 65%;
+    margin-left: 7.5%;
+}
+nav li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3.3%;
+}
+nav li a {
+    font: 16px "CenturyGothicRegular";
+    color: rgba(255,255,255, .7);
+    text-transform: uppercase;
+    border-bottom: 1px dashed transparent;
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+}
+nav li:last-child a {
+    margin-right: 0;
+}
+nav li a:hover {
+    color: #FFF;
+    border-bottom: 1px dashed rgba(255,255,255, .3);
+}
+.tel {
+    width: auto;
+    float: left;
+    height: 100%;
+}
+.tel span {
+    font: 20px "CenturyGothicRegular";
+    color: #FFF;
+}
+.offer .ornLine {bottom: 25px;}
+
+@media (max-width: 1600px) {
+    nav   {width: 75%;}
+}
+@media (max-width: 1300px) {
+    nav   {margin-left: 20px;}
+}
+/* ----------- offerSlider--------- */
 .offerSlider {
     height: 100%;
     width: 100%;
@@ -242,6 +335,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
     background-image: url("../images/slider/slide-1.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    overflow: hidden;
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
@@ -250,13 +344,15 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
     height: 100%;
 }
 
+/* ----------- slide Info--------- */
 .slideInfo {
     position: absolute;
     width: 510px;
     right: 15%;
-    bottom: 40px;
-    padding: 0 0 65px 0;
+    bottom: 140px;
     background-color: rgba(255,255,255, .9);
+    border-bottom: 3px solid #304071;
+    padding-bottom: 2px;
 }
 .slideInfoHeader {
     padding: 40px;
@@ -268,8 +364,11 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
     margin-bottom: 20px;
     line-height: 22px;
 }
+
 .slideInfoBody {
-    padding: 40px 40px 0 40px;
+    padding: 40px 40px 65px 40px;
+    position: relative;
+    border-bottom: 1px solid #304071;
 }
 .slideInfoBody p {
     font-size: 18px;
@@ -281,6 +380,58 @@ a.place {
     color: #304071;
     text-decoration: underline;
 }
+
+.slideNav {
+    text-align: center;
+}
+.slideNav li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 11px;
+    margin: 0 7px;
+    cursor: pointer;
+    background-color: #B7BAC9;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+}
+.slick-active[data-slick-index="0"] .slideNav li:nth-child(1) {
+    background-color: #304071;
+}
+.slick-active[data-slick-index="1"] .slideNav li:nth-child(2) {
+    background-color: #304071;
+}
+.slick-active[data-slick-index="2"] .slideNav li:nth-child(3) {
+    background-color: #304071;
+}
+.slick-active[data-slick-index="3"] .slideNav li:nth-child(4) {
+    background-color: #304071;
+}
+
+.slideInfoBody:after {
+    content: '';
+    height: 240px;
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -246px;
+    background-image: url("../images/slideInfoAfter.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% auto;
+         -o-background-size: 100% auto;
+            background-size: 100% auto;
+} 
+
+@media (max-width: 1500px) {
+    .slideInfo       {width: 450px; bottom: 80px;}
+    .slideInfoHeader {padding: 20px; font-size: 16px;}
+    .slideInfoBody {padding: 20px 20px 25px 20px;}
+    .slideInfoBody p  {margin-bottom: 15px; font-size: 16px;}
+}
+@media (max-width: 800px) {
+}
+
 /* --------------------------------------
    Choose Apartment
    -------------------------------------- */
@@ -331,7 +482,7 @@ a.place {
                      -ms-transition: all .3s;
                      -o-transition: all .3s;
                      transition: all .3s;
-                     width: 20%;
+                     width: 21%;
                      overflow: hidden;
                  }
 
@@ -373,7 +524,7 @@ a.place {
                      margin: auto;
                  }
 .apartment-1     {
-                     width: 60%;
+                     width: 58%;
                      border-right: 1px solid #fff;
                  }
 .apartment-1 img {
