@@ -77,10 +77,10 @@ $(".slideNav li").click(function(e){
     type: 'inline',
 
     fixedContentPos: false,
-    fixedBgPos: true,
+    fixedBgPos: false,
 
     overflowY: 'auto',
-    modal: true,
+    modal: false,
 
     closeBtnInside: true,
     preloader: false,
@@ -89,6 +89,31 @@ $(".slideNav li").click(function(e){
     removalDelay: 300,
     mainClass: 'my-mfp-slide-bottom'
   });
+
+$('#map-popup').height( $(window).height() * 0.7 );
+  
+  $('.magnific-map').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: false,
+    fixedBgPos: false,
+
+    overflowY: 'auto',
+    modal: false,
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-slide-bottom',
+
+    open: function(){
+            googleMap_popup()
+          }
+  });
+
+
 
   $('.gallery').magnificPopup({
     delegate: 'a',
@@ -132,6 +157,11 @@ $(".slideNav li").click(function(e){
   });
 
   $('.history_slider').slick({
+    arrows: false,
+    dots: true
+  });
+
+  $('.location_slider').slick({
     arrows: false,
     dots: true
   });
@@ -222,6 +252,38 @@ $(function() { // add class on scroll
       });
   };
   googleMap_initialize();
+
+  //--------------------------------Google Карта в футере ---------------------------------
+  function googleMap_popup() {
+
+      var mapCenterCoord = new google.maps.LatLng(59.970753, 30.261229);
+      var mapMarkerCoord = new google.maps.LatLng(59.970753, 30.261229);
+
+      var mapOptions = {
+        center: mapCenterCoord,
+        zoom: 17,
+        //draggable: false,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById('map-popup'), mapOptions);
+
+      var markerImage = new google.maps.MarkerImage('images/blue-marker.svg');
+      var marker = new google.maps.Marker({
+        icon: markerImage,
+        position: mapMarkerCoord, 
+        map: map,
+        title:"Голландия"
+      });
+
+      $(window).resize(function (){
+        $('#map-popup').height( $(window).height() * 0.7 );
+        map.setCenter(mapCenterCoord);
+      });
+  };
+
 
 });
 

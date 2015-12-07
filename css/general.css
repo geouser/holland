@@ -809,9 +809,9 @@ span.apartTip                       {   display: block;
                             margin: 0 auto;
                             text-align: left;}
 .about > .left_side     { background-image: url(../images/about/bg.jpg);
-                            background-size: 230%;
+                            background-size: 100%;
                             background-repeat: no-repeat;
-                            background-position: 5% 100%;}                 
+                            background-position: 50% 100%;}                 
 
 .about article p        { font-family: 'robotolight';
                             font-size: 18px;
@@ -1130,7 +1130,64 @@ span.apartTip                       {   display: block;
 
 
 
+/* ------------------------------ Location slide ---------------------------------*/
+.location .wrapper                      { width: 76%; padding-top: 10%; padding-left: 50px; text-align: left;}
+.location .left_side                    { background-image: url(../images/location_decor.png);
+                                            background-size: 100%;
+                                            background-position: 50% 100%;
+                                            background-repeat: no-repeat;}
+.location h3                            { font-family: 'robotomedium'; font-size: 18px; font-weight: normal;}
 
+
+.location_slider li                     { list-style: none;
+                                            margin-bottom: 6px;
+                                            padding-left: 30px;}
+.location_slider li a                   { color: #304071;
+                                            font: 18px 'robotolight';
+                                            position: relative;
+                                            display: inline;
+                                            border-bottom: 1px dashed #304071;}
+.location_slider li a:hover             { border-bottom-width: 0;}
+.location_slider li a:before            { width: 18px;
+                                            height: 12px;
+                                            content: " ";
+                                            position: absolute;
+                                            top: 3px;
+                                            left: -30px;
+                                            background-image: url(../images/check-icon.png);
+                                            background-size: 100%;
+                                            background-repeat: no-repeat;
+                                            background-position: 50% 50%;
+                                            opacity: 0.5;}
+.location_slider li.active a            { color: #292929; font-family: 'robotomedium'; border-bottom-width: 0;}
+.location_slider li.active a:before     { opacity: 1;}
+
+.location_slider .slick-dots            { text-align: left;}
+.location_slider .slick-dots li         { margin: 0; width: 30px; text-align: left;}
+.location_slider .slick-dots li button  {padding: 0; text-align: left;}
+.location_slider .slick-dots li button:before {color: #304071; font-size: 12px; text-align: left;}
+
+.map_popup                              { width: 30%;
+                                            margin-top: 10%;
+                                            margin-left: 30px;
+                                            padding: 3px 0;
+                                            border: 3px solid #304071;
+                                            border-left-width: 0;
+                                            border-right-width: 0;}
+.map_popup a                            { display: block;
+                                            width: 100%;
+                                            border: 1px solid #304071;
+                                            border-left-width: 0;
+                                            border-right-width: 0;}
+.map_popup a img                        { width: 100%;}
+#map-popup                              { width: 70%; height: 70%; margin: 0 auto; position: relative;}
+
+
+@media (max-width: 1600px) {
+    .location .wrapper                  { width: 82%; padding-top: 7%; padding-left: 0;}
+    .location_slider li a               { font-size: 14px;}
+    .location h3                        { font-size: 15px;}
+}
 
 
 
