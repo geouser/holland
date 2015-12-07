@@ -163,8 +163,10 @@ h2                                      {  font-family: "CenturyGothicRegular";
                                             color: #292929;
                                             margin-bottom: 10px;
                                         }
+.section                    { height: 100%; overflow: hidden;}
+
 @media (max-width: 1600px)  {
-    h2                    { font-size: 40px; margin-bottom: 20px;}
+    h2                      { font-size: 40px; margin-bottom: 20px;}
 }
 
 
@@ -796,7 +798,6 @@ span.apartTip                       {   display: block;
 
 
 /*--------------------------- About slide -------------------------*/
-.section                { height: 100%; overflow: hidden;}
 .right_side             { width: 50%; height: 100%; float: right;}
 .left_side              { width: 50%; height: 100%; float: left;}
 
@@ -1117,7 +1118,6 @@ span.apartTip                       {   display: block;
 .slide_row a:hover .content,
 .slide_row a.hover .content             { opacity: 1;}
 
-
 @media (max-width: 1600px)  {
     .slide_row a .content               { font-size: 14px; font-family: 'robotomedium'}
     .slide_row a .content:before        { width: 25px; height: 25px;}
@@ -1131,11 +1131,13 @@ span.apartTip                       {   display: block;
 
 
 /* ------------------------------ Location slide ---------------------------------*/
+.location                               { min-height: 800px;}
 .location .wrapper                      { width: 76%; padding-top: 10%; padding-left: 50px; text-align: left;}
 .location .left_side                    { background-image: url(../images/location_decor.png);
                                             background-size: 100%;
                                             background-position: 50% 100%;
                                             background-repeat: no-repeat;}
+.location .right_side                   { overflow: hidden;}
 .location h3                            { font-family: 'robotomedium'; font-size: 18px; font-weight: normal;}
 
 
@@ -1183,14 +1185,31 @@ span.apartTip                       {   display: block;
 #map-popup                              { width: 70%; height: 70%; margin: 0 auto; position: relative;}
 
 
+#locationMap img {}
+
+
+@media (max-height: 800px)  {
+    #locationMap                        { margin-bottom: -60px;}
+}
+
 @media (max-width: 1600px) {
     .location .wrapper                  { width: 82%; padding-top: 7%; padding-left: 0;}
     .location_slider li a               { font-size: 14px;}
     .location h3                        { font-size: 15px;}
+    #locationMap                        { margin-left: -150px;}
 }
-
-
-
+@media (max-width: 1200px) {
+    #locationMap                        { margin-left: -240px;}
+}
+@media (max-width: 1000px) {
+    .location                           { min-height: auto; height: auto;}
+    .location .right_side,
+    .location .left_side                { width: 100%; height: auto;}
+    #locationMap                        { margin-left: 0px; width: 100%;}
+}
+@media (max-width: 600px) {
+    #locationMap                        { width: 160%; margin-left: -35%;}
+}
 /* --------------------------------------
    process
    -------------------------------------- */
@@ -1510,3 +1529,5 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 
     .contacts footer .wrapper           { padding: 15px 0;}
 }
+
+
