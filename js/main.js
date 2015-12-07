@@ -41,24 +41,11 @@ $(function(){
 });
 
 
-$(function(){
-    $(window).resize(function(event) {
-      if ($(window).width() <= 1000) {
-        $('body').removeClass('display-vertical');
-      } else {$('body').addClass('display-vertical');};
-    });
-    if ($(window).width() < 800) {
-       $('body').removeClass('display-vertical');
-    }
-      else { $('body').addClass('display-vertical'); }
-      
-  })
-
 
 /*
-#############################
-#   Main JS for ____________   #
-#############################
+########################################
+#   Main JS for Holland Landing page   #
+########################################
 */
 
 jQuery(document).ready(function($) {
@@ -198,6 +185,43 @@ $(function() { // add class on scroll
   $(function() {
     $( ".infoTabs" ).tabs();
   });
+
+  //--------------------------------Google Карта в футере ---------------------------------
+  function googleMap_initialize() {
+
+      var mapCenterCoord = new google.maps.LatLng(59.970753, 30.261229);
+      var mapMarkerCoord = new google.maps.LatLng(59.970753, 30.261229);
+
+      var mapOptions = {
+        center: mapCenterCoord,
+        zoom: 17,
+        //draggable: false,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+      var styles = [{"featureType":"all","elementType":"all","stylers":[{"saturation":-100},{"gamma":1},{"lightness":-12}]}];
+
+      var styledMapType = new google.maps.StyledMapType(styles, {name: 'Styled'});
+      map.mapTypes.set('Styled', styledMapType);
+      map.setMapTypeId('Styled');
+
+      var markerImage = new google.maps.MarkerImage('images/blue-marker.svg');
+      var marker = new google.maps.Marker({
+        icon: markerImage,
+        position: mapMarkerCoord, 
+        map: map,
+        title:"Голландия"
+      });
+
+      $(window).resize(function (){
+        map.setCenter(mapCenterCoord);
+      });
+  };
+  googleMap_initialize();
 
 });
 
