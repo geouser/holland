@@ -1440,7 +1440,7 @@ span.apartTip                       {   display: block;
                                             border-left-width: 0;
                                             border-right-width: 0;
                                             background-color: #fff;}
-.contacts form                          { text-align: justify; padding-bottom: 14%;}
+.contacts form                          { text-align: left; padding-bottom: 14%;}
 .contacts form input                    { width: 270px;
                                             height: 48px;
                                             background-color: #f1f1f1;
@@ -1450,7 +1450,7 @@ span.apartTip                       {   display: block;
                                             border: none;
                                             border-radius: 4px;
                                             padding: 0 10px;
-                                            margin: 10px 0;
+                                            margin: 10px 10px 10px 0;
                                             font: 18px 'robotolight';}
 
 .contacts form textarea                 { width: 430px;
@@ -1468,6 +1468,7 @@ span.apartTip                       {   display: block;
 .contacts form button                   { padding: 0 25px;
                                             overflow: hidden;
                                             line-height: normal;
+                                            display: block;
                                             background-color: #3b4a78;
                                             height: 48px;
                                             border-radius: 4px;
@@ -1503,8 +1504,8 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
     .contacts h3                        { margin-top: 10px;}
 
     .contacts .main                     { font-size: 45px; margin: 15px 0;}
-    .contacts form input                { font-size: 16px; height: 35px;}
-    .contacts form textarea             { font-size: 16px; height: 80px;}
+    .contacts form input                { font-size: 16px; height: 35px; width: 220px;}
+    .contacts form textarea             { font-size: 16px; height: 80px; width: 454px;}
     .contacts form button               { height: 35px; padding-bottom: 4px; font-size: 14px;}
     .contacts form button img           { width: 15px;}
 
