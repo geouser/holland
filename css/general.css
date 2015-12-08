@@ -1137,7 +1137,11 @@ span.apartTip                       {   display: block;
                                             background-size: 100%;
                                             background-position: 50% 100%;
                                             background-repeat: no-repeat;}
-.location .right_side                   { overflow: hidden;}
+
+.location .right_side                   { overflow: hidden; position: relative;}
+
+
+
 .location h3                            { font-family: 'robotomedium'; font-size: 18px; font-weight: normal;}
 
 
@@ -1185,7 +1189,60 @@ span.apartTip                       {   display: block;
 #map-popup                              { width: 70%; height: 70%; margin: 0 auto; position: relative;}
 
 
-#locationMap img {}
+
+.h-map                                  { position: absolute;}
+
+.h-map .box                             { position: relative; width: 100%; height: 100%;}
+.h-map .box a                           { position: absolute;
+                                            z-index: 3;
+                                            width: 13.2%;
+                                            opacity: 0;}
+.h-map .box a:hover,
+.h-map .box a.hover                     { opacity: 1;}
+.h-map .box a .wrap                     { position: relative; width: 100%;}
+.h-map .box a .wrap img                 { width: 100%;}
+.h-map .box a .wrap:before              { position: absolute;
+                                            content: " ";
+                                            width: 115%;
+                                            padding-bottom: 38.5%;
+                                            background-image: url(../images/hover-before.png);
+                                            background-size: 100%;
+                                            background-position: 50% 50%;
+                                            bottom: 70%;
+                                            left: -7.5%;
+                                            display: none;}
+.h-map .box a .wrap .title              { width: 115%;
+                                            padding: 5px;
+                                            background-color: rgba(59, 74, 120, 0.9);
+                                            border-radius: 6px;
+                                            border: 1px solid #8E90A0;
+                                            overflow: hidden;
+                                            text-align: center;
+                                            color: #fff;
+                                            position: absolute;
+                                            left: -7.5%;
+                                            bottom: 129%;
+                                            font: 16px 'robotomedium';
+                                            line-height: 16px;
+                                            display: none;}
+.h-map .box a:hover .wrap .title,
+.h-map .box a.hover .wrap .title,
+.h-map .box a:hover .wrap:before,
+.h-map .box a.hover .wrap:before        { display: block;}
+
+.h-map .box a#link001                   {top: 58.5%; left: 55%;}
+.h-map .box a#link002                   {top: 19%; left: 25%;}
+.h-map .box a#link003                   {top: 31%; left: 64%;}
+.h-map .box a#link004                   {top: 74%; left: 9%;}
+.h-map .box a#link005                   {top: 44.9%; left: 34.1%; width: 19%}
+.h-map .box a#link005 .wrap .title      {background-color: transparent; padding: 0; border: none;}
+.h-map .box a#link006                   {top: 46%; left: 64%;}
+.h-map .box a#link007                   {top: 54.5%; left: 31.5%;}
+
+
+
+
+
 
 
 @media (max-height: 800px)  {
@@ -1197,6 +1254,8 @@ span.apartTip                       {   display: block;
     .location_slider li a               { font-size: 14px;}
     .location h3                        { font-size: 15px;}
     #locationMap                        { margin-left: -150px;}
+
+    .h-map .box a .wrap .title          { font-size: 14px;}
 }
 @media (max-width: 1200px) {
     #locationMap                        { margin-left: -240px;}
