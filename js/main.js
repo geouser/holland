@@ -48,6 +48,10 @@ $(function(){
 ########################################
 */
 
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+});
+
 jQuery(document).ready(function($) {
 
 $('.apartment.visible').find('.apartmentInfoWrap ul').fadeIn('slow');
@@ -284,6 +288,16 @@ $(function() { // add class on scroll
       });
   };
 
+$('#first').click(function(e){
+  e.preventDefault();
+  var coord = $(this).offset();
+  console.log(coord);
+});
+$('#second').click(function(e){
+  e.preventDefault();
+  var coord = $(this).offset();
+  console.log(coord);
+});
 
 });
 
