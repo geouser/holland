@@ -97,7 +97,7 @@ $(".slideNav li").click(function(e){
 $('#map-popup').height( $(window).height() * 0.7 );
   
   $('.magnific-map').magnificPopup({
-    type: 'inline',
+    type: 'iframe',
 
     fixedContentPos: false,
     fixedBgPos: false,

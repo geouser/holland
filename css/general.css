@@ -846,6 +846,8 @@ span.apartTip                       {   display: block;
 
 
 /*--------------------------- About slide -------------------------*/
+.about_1,
+.about_2                { min-height: 750px;}
 .right_side             { width: 50%; height: 100%; float: right;}
 .left_side              { width: 50%; height: 100%; float: left;}
 
@@ -881,8 +883,7 @@ span.apartTip                       {   display: block;
                             display: block;
                             border: 1px solid #3b4a78;
                             border-left-width: 0;
-                            border-right-width: 0;
-                            background-color: #fff;}
+                            border-right-width: 0;}
 
 .order_view             { width: 280px;
                             height: 50px;
@@ -935,7 +936,7 @@ span.apartTip                       {   display: block;
                             opacity: 0;
                             overflow: hidden;
                             background-image: url(../images/about/content-decor.png);
-                            background-size: auto 11%;
+                            background-size: auto 29px;
                             background-repeat: no-repeat;
                             background-position: 50% 98%;}
 .about__house .wrap     { vertical-align: middle; display: inline-block;}
@@ -1024,7 +1025,7 @@ span.apartTip                       {   display: block;
                                     opacity: 0;
                                     z-index: -1;
                                     background-image: url(../images/about/content-decor.png);
-                                    background-size: auto 11%;
+                                    background-size: auto 29px;
                                     background-repeat: no-repeat;
                                     background-position: 50% 98%;}
 
@@ -1033,6 +1034,8 @@ span.apartTip                       {   display: block;
 
 
 @media (max-width: 1600px) {
+    .about_1,
+    .about_2                            { min-height: 550px;}
     .about .wrapper                     { width: 86%;}
     .order_view                         { width: auto; padding: 0 20px; height: 35px; font-size: 13px;}
     .order_view img                     { width: 15px; height: 15px;}
@@ -1041,6 +1044,7 @@ span.apartTip                       {   display: block;
     .about article p.main               { font-size: 18px; margin-top: 20px;}
     .about article p.main span          { padding: 10px 0; line-height: 20px;}
 
+    .about__house h2                    { font-size: 35px;}
     .about__house address               { margin-bottom: 10px;}
     .about__house p                     { line-height: 18px; margin-bottom: 10px;}
     .about__house button                { height: 35px; padding: 0 15px; font-size: 13px;}
@@ -1065,7 +1069,7 @@ span.apartTip                       {   display: block;
 
 /*------------------------- History slide --------------------------*/
 
-
+.section.history                        { min-height: 750px;}
 .section.history .right_side            { background-image: url(../images/history/history_bg.jpg);
                                             background-size: 100%;
                                             background-position: 50% 100%;
@@ -1167,6 +1171,7 @@ span.apartTip                       {   display: block;
 .slide_row a.hover .content             { opacity: 1;}
 
 @media (max-width: 1600px)  {
+    .section.history                    { min-height: 550px;}
     .slide_row a .content               { font-size: 14px; font-family: 'robotomedium'}
     .slide_row a .content:before        { width: 25px; height: 25px;}
 
@@ -1538,7 +1543,7 @@ span.apartTip                       {   display: block;
 
 
 /*--------------------------- Contacts slide -----------------------------*/
-.contacts.section                       { min-height: 100%;}
+.contacts.section                       { min-height: 950px;}
 .contacts .wrapper                      { width: 76%; padding-top: 10%; text-align: left;}
 
 .contacts p                             { font-size: 18px;}
@@ -1622,6 +1627,7 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 .gm-style-cc                            {    display: none }
 
 @media (max-width: 1600px) {
+    .contacts.section                   { min-height: 750px;} 
     .contacts .wrapper                  { width: 82%; padding-top: 7%;}
     .contacts p,
     .contacts h3,
