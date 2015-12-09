@@ -714,6 +714,11 @@ a.place             {    color: #304071;
                      transition: all .3s;
                      width: 21%;
                      overflow: hidden;
+                     background-repeat: no-repeat;
+                     background-position: 50% 50%;
+                     -webkit-background-size: cover;
+                          -o-background-size: cover;
+                             background-size: cover;
                  }
 
 .apartment:after {
@@ -849,10 +854,11 @@ a.place             {    color: #304071;
                                          font-size: 24px;
                                          text-align: left;
                                          color: #FFF;
-                                         margin-right: 60px;
                                      }
 .row li:last-child                   {    margin-right: 0 }
-.row li:nth-child(2)                 {    font-family: 'CenturyGothic-Bold' }
+.row li:nth-child(1)                 {    width: 22%;}
+.row li:nth-child(2)                 {    font-family: 'CenturyGothic-Bold'; width: 32%;}
+.row li:nth-child(3)                 {    display: inline-block; vertical-align: middle; width: 44%; text-align: right;}
 .row li a                            {
                                          color: #ADAB89;
                                          text-decoration: underline;
@@ -866,9 +872,43 @@ span.apartTip                       {   display: block;
                                         margin: 15px 0;
                                         }
 .apartmentInfo .href               {    margin: 50px 4px 0;}
+
 @media (max-width: 1500px) {
     .ornLine           {height: 40px;}
     .chooseApartTitle  {height: 70px; line-height: 65px; font-size: 38px;}
+    .apartmentInfo h4 span  {font-size: 15px;}
+}
+@media (max-width: 1300px) {
+    .row li            {font-size: 20px;}
+}
+@media (max-width: 1200px) {
+    .apartmentInfo ul    {width: 98%;}
+}
+@media (max-width: 1000px) {
+    .apartmentInfoWrap      {width: 96%;}
+    .apartmentInfo h4       {font-size: 28px;}
+    .apartmentInfo h4 span  {font-size: 14px;}
+    .row li                 {font-size: 16px;}
+}
+@media (max-width: 900px) {
+    .chooseApart          {min-height: auto; height: auto;}
+    .chooseApart .ornLine {display: none;}
+    .apartment            {width: 100% !important; height: 600px; border: 0;}
+    .chooseApartTitle     {height: 50px; line-height: 50px; font-size: 32px;}
+}
+@media (max-width: 600px) {
+     .chooseApartTitle     {height: 40px; line-height: 40px; font-size: 24px;}
+}
+@media (max-width: 450px) {
+    .apartment              {height: 650px;}
+    .row li                 {font-size: 14px;}
+    .row li:nth-child(1)                 {    width: 20%;}
+    .row li:nth-child(2)                 {    width: 30%;}
+    .row li:nth-child(3)                 {    width: 47%;}
+    .apartmentInfo .href                 {    margin: 10px 0 0 0;}
+}
+@media (max-width: 360px) {
+     .chooseApartTitle     {font-size: 22px;}
 }
 /*---------------------------------------------------------------*/
 

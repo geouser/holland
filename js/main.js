@@ -190,22 +190,12 @@ $(function() { // add class on scroll
   });
 });
 
-  $(function() { // scroll to anchor
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length  ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top 
-          }, 1000);
-          return false;
-        }
-      }
-    });
-  });
-
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 800);
+    return false;
+});
 
  $('.processBlockInfo h5 button').click(function(){
     if($(this).hasClass('visible')) {
