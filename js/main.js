@@ -48,11 +48,11 @@ $(function(){
 ########################################
 */
 
-$(document).ready(function(e) {
-    $('img[usemap]').rwdImageMaps();
-});
+
 
 jQuery(document).ready(function($) {
+
+$('.scrollbar').perfectScrollbar();
 
 $('.apartment.visible').find('.apartmentInfoWrap ul').fadeIn('slow');
 
