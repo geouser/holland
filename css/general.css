@@ -156,17 +156,33 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 
 .float-right                  {    float: right;}
 
-h2                                      {  font-family: "CenturyGothicRegular";
-                                            font-size: 55px; line-height: 1;
-                                            text-transform: uppercase;
-                                            font-weight: normal;
-                                            color: #292929;
-                                            margin-bottom: 10px;
-                                        }
+h2                          {   font-family: "CenturyGothicRegular";
+                                font-size: 55px; line-height: 1;
+                                text-transform: uppercase;
+                                font-weight: normal;
+                                color: #292929;
+                                margin-bottom: 10px;
+                            }
 .section                    { height: 100%; overflow: hidden;}
+.right_side                 { width: 50%; height: 100%; float: right;}
+.left_side                  { width: 50%; height: 100%; float: left;}
 
 @media (max-width: 1600px)  {
     h2                      { font-size: 40px; margin-bottom: 20px;}
+}
+@media (max-width: 1000px)  {
+    .right_side,          
+    .left_side                  {width: 100%; height: auto;}
+    .section                    {min-height: auto;}
+}
+@media (max-width: 800px)  {
+    h2                      { font-size: 36px;}
+}
+@media (max-width: 600px)  {
+    h2                      { font-size: 32px;}
+}
+@media (max-width: 400px)  {
+    h2                      { font-size: 28px;}
 }
 
 
@@ -262,7 +278,7 @@ h2                                      {  font-family: "CenturyGothicRegular";
         .logo       {   margin-left: 20px;}
 }
 @media (max-width: 1000px) {
-        .logo       {   width: 250px;}
+        .logo       {   width: 220px;}
 }
 @media (max-width: 900px) {
         .logo       {   width: 150px;}
@@ -920,8 +936,6 @@ span.apartTip                       {   display: block;
 /*--------------------------- About slide -------------------------*/
 .about_1,
 .about_2                { min-height: 750px;}
-.right_side             { width: 50%; height: 100%; float: right;}
-.left_side              { width: 50%; height: 100%; float: left;}
 
 .about__house           { width: 100%;
                             height: 33.33%;
@@ -1251,7 +1265,15 @@ span.apartTip                       {   display: block;
     .history_slider p                   { font-size: 16px;}
     .section.history h3                 { font-size: 18px; margin-bottom: 20px;}
 }
-
+@media (max-width: 1000px)  {
+    .slide_row                         {height: 300px;}
+}
+@media (max-width: 750px)  {
+    .slide_row                         {height: 280px;}
+}
+@media (max-width: 500px)  {
+    .slide_row                         {height: 460px; border: none;}
+}
 
 
 
@@ -1422,7 +1444,7 @@ span.apartTip                       {   display: block;
 }
 .processBlockInfo {
     position: absolute;
-    left: 0; bottom: calc(-100% + 70px);
+    left: 0; top: 78%;
     width: 100%; height: 100%;
     background: rgba(0,0,0, .5);
     padding: 5%;
@@ -1437,12 +1459,12 @@ span.apartTip                       {   display: block;
              transition: all ease-out .3s; 
 }
 .processBlockInfo.visible {
-    bottom: 0;
+    bottom: 0;top: 0;
     background-color: rgba(59, 74, 120, 0.8);
     padding-top: 7%;
 }
 .processBlockInfo.hid {
-    bottom: calc(-100% + 70px);
+    top: 78%;
 }
 .processBlockInfo h5 {
     font: 18px 'robotobold';
@@ -1515,6 +1537,84 @@ span.apartTip                       {   display: block;
     font-size: 18px;
     font-weight: 100;
 }
+@media (max-height: 1400px) and (max-width: 1400px) and (min-width: 1000px) {
+    .process                 {max-height: 700px;}    
+}
+@media (min-height: 1150px)  {   
+    .processBlockInfo      {top: 83%;}
+    .processBlockInfo.hid  {top: 83%;}
+}
+@media (max-height: 1000px)  {
+    .processBlockInfo h5     {margin-bottom: 20px;}
+    .processBlockInfo ul li  {margin-bottom: 6px;}    
+}
+@media (max-height: 900px)  {
+    .processBlockInfo h5     {margin-bottom: 20px; font-size: 16px;}
+    .processBlockInfo ul li  {margin-bottom: 5px; font-size: 16px;}    
+}
+@media (max-height: 800px)  {
+    .processBlockInfo h5     {font-size: 14px;}
+    .processBlockInfo ul li  {font-size: 14px;}
+    .processBlockInfo        {background-size: auto 8%;}
+    .processBlockInfo.visible {padding-top: 7%;} 
+    .processBlockInfo         {padding: 3%;}   
+}
+@media (max-height: 760px)  {
+    .processBlockInfo ul li:before  {width: 12px; height: 8px;} 
+}
+
+
+
+@media (max-width: 1600px)  {
+    .processBlockInfo ul li,
+    .processBlockInfo h5            {font-size: 16px;}
+    .processBlockInfo ul li:before  {width: 12px; height: 8px;}
+}
+
+@media (max-width: 1400px)  {
+    .processBlockInfo ul li, 
+    .processBlockInfo h5     {font-size: 13px;}
+    .processBlockInfo ul li,
+    .processBlockInfo h5     {font-size: 14px;}
+}
+
+@media (max-width: 1300px)  {
+    .processBlockInfo ul li, 
+    .processBlockInfo h5     {font-size: 12px;}
+    .processBlockInfo h5     {margin-bottom: 15px;}
+}
+@media (max-width: 1000px)  {
+    .processBlockInfo ul li, 
+    .processBlockInfo h5     {font-size: 16px;}
+    .process                 {min-height: auto; height: auto;}
+}
+@media (max-width: 660px)  {
+    .processBlockInfo ul li, 
+    .processBlockInfo h5         {font-size: 14px;}
+    .processBlockInfo h5 button  {top: 0; right: 2px;}
+}
+@media (max-width: 1500px)  {
+    .processBlockInfo      {top: 83%;}
+    .processBlockInfo.hid  {top: 83%;}
+}
+@media (max-width: 540px)  {
+    .processBlockInfo ul li, 
+    .processBlockInfo h5         {font-size: 13px;}
+    .processBlockInfo h5 button  {top: -2px; right: 0px;}
+}
+@media (max-width: 500px)  {
+    .process                  {min-height: auto; height: auto;}
+    .processBlock             {width: 100%; height: 50%;  border: none !important; border-bottom: 1px solid #fff !important;}
+    .processBlockInfo ul li, 
+    .processBlockInfo h5      {font-size: 15px;}
+}
+@media (max-width: 450px)  {
+    .processBlockInfo ul li, .processBlockInfo h5 {font-size: 14px;}
+}
+@media (max-width: 360px)  {
+    .processBlockInfo      {top: 81%;}
+    .processBlockInfo.hid  {top: 81%;}
+}
 
 .infoTabs .ui-tabs-nav {
     background: none !important;
@@ -1579,41 +1679,31 @@ span.apartTip                       {   display: block;
 .infoTabs .href {margin-top: 25px;}
 
 
-@media (max-height: 1000px)  {
-    .processBlockInfo h5     {margin-bottom: 20px;}
-    .processBlockInfo ul li  {margin-bottom: 6px;}    
+@media (max-width: 1300px)  {
+    .infoTabs p    {font-size: 16px; margin-bottom: 15px;}
 }
-@media (max-height: 900px)  {
-    .processBlockInfo h5     {margin-bottom: 20px; font-size: 16px;}
-    .processBlockInfo ul li  {margin-bottom: 5px; font-size: 16px;}    
+@media (max-width: 1000px)  {
+    .process .right_side   {padding: 30px 0 200px 0; background-size: 100% 50%;}
+    .wrapper.short         {padding-top: 0;}
+    .infoTabs .ui-tabs-nav {margin-bottom: 20px;}
 }
-@media (max-height: 800px)  {
-    .processBlockInfo h5     {font-size: 14px;}
-    .processBlockInfo ul li  {font-size: 14px;}
-    .processBlockInfo        {bottom: calc(-100% + 50px); background-size: auto 8%;}
-    .processBlockInfo.hid    {bottom: calc(-100% + 50px);} 
-    .processBlockInfo.visible {padding-top: 7%;} 
-    .processBlockInfo         {padding: 3%;}   
+@media (max-width: 800px)  {
+    .process .right_side   {background-size: 100% 45%;}
 }
-@media (max-height: 760px)  {
-    .processBlockInfo        {bottom: calc(-100% + 40px);}
-    .processBlockInfo.hid    {bottom: calc(-100% + 40px);}
-    .processBlockInfo ul li:before  {width: 12px; height: 8px;} 
+@media (max-width: 700px)  {
+    .process .right_side   {background-size: 100% 40%;}
+    .infoTabs p            {font-size: 14px;}
 }
-
-@media (max-width: 1600px)  {
-    .processBlockInfo ul li,
-    .processBlockInfo h5 {font-size: 16px;}
-    .processBlockInfo ul li:before  {width: 12px; height: 8px;}
+@media (max-width: 550px)  {
+    .process .right_side   {background-size: 100% 35%;}
 }
-
-@media (max-width: 1400px)  {
-    .processBlockInfo ul li,
-    .processBlockInfo h5 {font-size: 14px;}
+@media (max-width: 450px)  {
+    .process .right_side   {background-size: 100% 25%; padding-bottom: 100px;}
+    .infoTabs .ui-tabs-nav li {display: block; width: 80%; margin-bottom: 5px;}
 }
-
-
-
+@media (max-width: 360px)  {
+    .process .right_side   {background-size: 100% 20%;}
+}
 /*--------------------------- Contacts slide -----------------------------*/
 .contacts.section                       { min-height: 950px;}
 .contacts .wrapper                      { width: 76%; padding-top: 10%; text-align: left;}
@@ -1716,4 +1806,15 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
     .contacts footer .wrapper           { padding: 15px 0;}
 }
 
+@media (max-width: 1000px) {
+    .contacts.section                   { min-height: auto; height: auto;} 
+    #map-canvas                         { height: 400px;}
+}
+@media (max-width: 600px) {
+    .contacts .main                     { font-size: 35px;}
+    .contacts form textarea             { width: 100%;}
+}
+@media (max-width: 360px) {
+    .contacts .main                     { font-size: 32px;}
+}
 
