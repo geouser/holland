@@ -1038,7 +1038,7 @@ span.apartTip                       {   display: block;
                             text-transform: uppercase;
                             line-height: 20px;
                             margin-bottom: 5px;}
-.about__house>h2        { display: inline-block; vertical-align: middle; width: 95%; padding-left: 6.2%;}
+.about__house>h2        { display: inline-block; vertical-align: middle; padding-left: 6.2%; position: relative;}
 .about__house address   { color: #fff;
                             font-family: 'robotothin';
                             font-size: 15px;
