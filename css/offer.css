@@ -485,42 +485,6 @@ header.hasScrolled               {    position: fixed; z-index: 100;}
                          display: block;
                          line-height: normal;
                     }
-.shadow:after       {    content: "";
-                         display: block;
-                         width: 160%; max-width: 640px;
-                         height: 200%; max-height: 320px;
-                         position: absolute;
-                         z-index: -1;
-                         left: -100%;
-                         right: -100%;
-                         top: -100%;
-                         bottom: -100%;
-                         margin: auto;
-                         background: rgb(30,87,153); /* Old browsers */
-                         background: -moz-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.56) 37%, rgba(0,0,0,0) 69%); /* FF3.6-15 */
-                         background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%,rgba(0,0,0,.6) 0%,rgba(0,0,0, .56) 37%,rgba(0,0,0,0) 69%); /* Chrome10-25,Safari5.1-6 */
-                         background: radial-gradient(ellipse at center, rgba(30,87,153,1) 0%,rgba(0,0,0, .6) 0%,rgba(0,0,0, .56) 37%,rgba(0,0,0,0) 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                    }
-.about h2.shadow                       {    z-index: 3 }
-.about .shadow:after                   {    width: 120% }
-.about_2 .about__house>h2.shadow:after {
-                                           opacity: .7;
-                                           width: 140%;
-                                           height: 210%;
-                                       }
-.about__house .box .shadow::after      {
-                                           width: 110%;
-                                           left: -119%;
-                                       }
-.about__house .box:hover .shadow::after
-                                       {    display: none }
-.about__house .box.hover .shadow::after
-                                       {    display: none }
-.offer h1.shadow:after                 {
-                                           max-width: 200%;
-                                           max-width: 160%;
-                                           left: -108%;
-                                       }
 
 @media (max-width: 1400px) {
         .offer h1      {font-size: 45px; line-height: 1;}
