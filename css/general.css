@@ -1169,12 +1169,22 @@ span.apartTip                       {   display: block;
 
     .about > .left_side                 { height: auto; padding: 10% 0 20%;}
  
-    .about > .right_side                { height: 750px;}
+    .about > .right_side                { height: 900px;}
 
     .about_2 .about__house .box         { height: 100%;}
+    .about_2 .about__house .box h2      { padding-left: 16%;}
     .about_2 .about__house .left_side,
     .about_2 .about__house .right_side {width: 50%; height: 100%;}
 }
+@media (max-width: 750px)  {
+    .about > .right_side                { height: 740px;}
+    .about__house .num                  { top: 3px; left: 3px; margin-top: 0;}
+}
+
+
+
+
+
 
 
 /*------------------------- History slide --------------------------*/
@@ -1291,9 +1301,13 @@ span.apartTip                       {   display: block;
 }
 @media (max-width: 1000px)  {
     .slide_row                         {height: 300px;}
+    .section.history                   { height: auto; min-width: auto;}
+
+    .section.history .right_side       { padding: 10% 0 20%;}
 }
 @media (max-width: 750px)  {
     .slide_row                         {height: 280px;}
+    .section.history .slide_row        { height: 245px;}
 }
 @media (max-width: 500px)  {
     .slide_row                         {height: 460px; border: none;}
