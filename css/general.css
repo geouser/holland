@@ -1442,17 +1442,26 @@ span.apartTip                       {   display: block;
 
     .h-map .box a .wrap .title          { font-size: 14px;}
 }
-@media (max-width: 1200px) {
-    #locationMap                        { margin-left: -240px;}
-}
+
 @media (max-width: 1000px) {
     .location                           { min-height: auto; height: auto;}
+    .location .wrapper                  { padding: 0;}
     .location .right_side,
     .location .left_side                { width: 100%; height: auto;}
-    #locationMap                        { margin-left: 0px; width: 100%;}
+
+    .location .left_side                { padding: 10% 0 20%;}
+
+    .map-box                            { width: 100%; height: auto;}
+    .h-map                              { width: 100%!important;
+                                            height: auto!important;
+                                            position: static;
+                                            margin-left: 0!important;}
+
+    .h-map #cover                       { width: 100%!important; height: auto!important;}
+
 }
 @media (max-width: 600px) {
-    #locationMap                        { width: 160%; margin-left: -35%;}
+
 }
 /* --------------------------------------
    process

@@ -316,7 +316,7 @@ $('a').click(function(){
         'height': 'auto',
         'left': '0'
       });
-    } else if ( $(window).width() <= 1400 ) {
+    } else if ( $(window).width() <= 1400 && $(window).width() > 1000 ) {
       el.height(parentHeight);
       el.find('#cover').css({
         height: parentHeight,
@@ -327,7 +327,9 @@ $('a').click(function(){
         'left': '50%',
         'width': 'auto',
         'margin-top': '0',
-        'margin-left': '-' + $(window).width()/4 + 'px'
+      });
+      el.css({
+        'margin-left': '-' + el.width()/2 + 'px'
       });
     }
 
