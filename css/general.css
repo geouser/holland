@@ -178,6 +178,9 @@ h2                          {   font-family: "CenturyGothicRegular";
 @media (max-width: 800px)  {
     h2                      { font-size: 36px;}
 }
+@media (max-width: 700px)  {
+    p                       { font-size: 14px;}
+}
 @media (max-width: 600px)  {
     h2                      { font-size: 32px;}
 }
@@ -1295,7 +1298,6 @@ span.apartTip                       {   display: block;
     .slide_row a .content               { font-size: 14px; font-family: 'robotomedium'}
     .slide_row a .content:before        { width: 25px; height: 25px;}
 
-    .section.history h2                 { font-size: 40px;}
     .history_slider p                   { font-size: 16px;}
     .section.history h3                 { font-size: 18px; margin-bottom: 20px;}
 }
@@ -1308,9 +1310,13 @@ span.apartTip                       {   display: block;
 @media (max-width: 750px)  {
     .slide_row                         {height: 280px;}
     .section.history .slide_row        { height: 245px;}
+    .history_slider p                  { font-size: 14px;}
+    .section.history h3                { font-size: 16px; line-height: normal;}
+    .history_slider h4                 { font-size: 16px; line-height: normal;}
 }
 @media (max-width: 500px)  {
     .slide_row                         {height: 460px; border: none;}
+    .slide_row a .content              {font-size: 12px;}
 }
 
 
@@ -1453,6 +1459,12 @@ span.apartTip                       {   display: block;
 }
 @media (max-width: 600px) {
     #locationMap                        { width: 160%; margin-left: -35%;}
+}
+@media (max-width: 500px) {
+    .section.history .slide_row         { height: 210px;}
+}
+@media (max-width: 360px) {
+    .section.history .slide_row         { height: 170px;}
 }
 /* --------------------------------------
    process
