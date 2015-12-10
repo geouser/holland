@@ -242,6 +242,7 @@ h2                          {   font-family: "CenturyGothicRegular";
                          left: 0; right: 0; margin: auto; width: 84px; height: 84px;
                          cursor: pointer;
                          color: transparent;
+                         z-index: 100;
                          -webkit-transition: all .2s;
                             -moz-transition: all .2s;
                              -ms-transition: all .2s;
@@ -293,6 +294,12 @@ h2                          {   font-family: "CenturyGothicRegular";
 }
 @media (max-width: 800px) and (min-height: 1000px) {
         .logo       {  width: 250px;}
+}
+@media (max-height: 700px) {
+        .scrollDown   {display: none;}
+}
+@media (min-height: 900px) and (max-width: 1000px) {
+        .scrollDown   {bottom: 1vh;}
 }
 /* ----------- header--------- */
 header              {    position: absolute;
@@ -497,8 +504,13 @@ header.hasScrolled               {    position: fixed; z-index: 100;}
                          background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%,rgba(0,0,0,.6) 0%,rgba(0,0,0, .56) 37%,rgba(0,0,0,0) 69%); /* Chrome10-25,Safari5.1-6 */
                          background: radial-gradient(ellipse at center, rgba(30,87,153,1) 0%,rgba(0,0,0, .6) 0%,rgba(0,0,0, .56) 37%,rgba(0,0,0,0) 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                     }
-.about .shadow:after {   width: 110%; left: -117%; height: 150%;}
-.offer h1.shadow:after {max-width: 200%; max-width: 160%; left: -108%;}
+.about h2.shadow                  {z-index: 3;}
+.about .shadow:after              {width: 120%;}
+.about_2 .about__house>h2.shadow:after   {opacity: .7; width: 140%; height: 210%;}
+.about__house .box .shadow::after {width: 110%;left: -119%;}
+.about__house .box:hover .shadow::after {display: none;}
+.about__house .box.hover .shadow::after {display: none;}
+.offer h1.shadow:after            {max-width: 200%; max-width: 160%; left: -108%;}
 
 @media (max-width: 1400px) {
         .offer h1      {font-size: 45px; line-height: 1;}
@@ -510,6 +522,10 @@ header.hasScrolled               {    position: fixed; z-index: 100;}
 @media (max-width: 1100px) {
         .offer h1      {font-size: 45px; margin-left: 20px;}
         .offer h1 span {font-size: 20px;}
+}
+@media (max-width: 1000px) {
+         .about__house .box .shadow:after {   width: 100%; left: -100%;}
+         .about_2 .about__house>h2.shadow:after   {opacity: .7; width: 100%; height: 210%;}
 }
 @media (max-width: 900px) {
         .offer h1      {font-size: 40px; margin-left: 10px;}
@@ -1042,7 +1058,7 @@ span.apartTip                       {   display: block;
                             margin-bottom: 5px;
                             position: relative;
                             }
-.about__house>h2        { display: inline-block; vertical-align: middle; padding-left: 6.2%; position: relative;}
+.about__house>h2        { display: inline-block; vertical-align: middle; margin-left: 6.2%; position: relative;}
 .about__house address   { color: #fff;
                             font-family: 'robotothin';
                             font-size: 15px;
@@ -1173,7 +1189,7 @@ span.apartTip                       {   display: block;
 
 @media (max-width: 1000px) {
     .about__house .num                  { left: 0;}
-    .about__house > h2                  { padding-left: 8%;}
+    .about__house > h2                  { margin-left: 8%;}
     .about__house .content              { padding-left: 8%;}
     .about_1,
     .about_2                            { min-height: auto; height: auto;}
