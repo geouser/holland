@@ -548,7 +548,6 @@ header.hasScrolled               {    position: fixed; z-index: 100;}
 .slide                                  {    height: 100%;
                                              width: 100%;
                                              position: relative;
-                                             background-image: url("../images/slider/slide-1.jpg");
                                              background-repeat: no-repeat;
                                              background-position: 50% 50%;
                                              overflow: hidden;
@@ -648,6 +647,8 @@ a.place             {    color: #304071;
 .slick-active[data-slick-index="2"] .slideNav li:nth-child(3)
                                         {    background-color: #304071 }
 .slick-active[data-slick-index="3"] .slideNav li:nth-child(4)
+                                        {    background-color: #304071 }
+.slick-active[data-slick-index="4"] .slideNav li:nth-child(5)
                                         {    background-color: #304071 }
   
 .slideInfoWrap                          {    position: relative;}                                      
@@ -1498,7 +1499,7 @@ span.apartTip                       {   display: block;
     .section.history .slide_row         { height: 210px;}
 }
 @media (max-width: 360px) {
-    .section.history .slide_row         { height: 170px;}
+    .section.history .slide_row         { height: 150px;}
 }
 /* --------------------------------------
    process
@@ -1900,5 +1901,101 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 }
 @media (max-width: 360px) {
     .contacts .main                     { font-size: 32px;}
+}
+
+.mfp-hide {
+    display: block !important;
+}
+
+
+.boxMap                           { display: block;
+                                        width: 370px;
+                                        position: relative;
+                                        z-index: 10;
+                                        padding-bottom: 15px;
+                                        text-align: left;
+                                        background-color: rgba(255,255,255,0.85);
+                                        border-radius: 35px;
+                                        border: 10px solid #A39F7A;
+                                        -webkit-background-clip: padding-box;
+                                                background-clip: padding-box;}
+.boxMap .text-block                 { text-align: left; padding: 10px 15px;}
+.boxMap .text-block h3              { font-size: 30px;
+                                       font-variant: small-caps;
+                                       line-height: 20px;
+                                       font-weight: normal;
+                                       text-align: left;
+                                       display: inline-block;
+                                       position: relative;
+                                       letter-spacing: -0.5px;}
+.boxMap .text-block h3 span         { font-size: 16px; font-variant: normal; display: inline-block;}
+.boxMap .text-block h3:after        {content: " ";
+                                       width: 66px;
+                                       height: 1px;
+                                       position: absolute;
+                                       bottom: -25px;
+                                       background-color: #000;
+                                       left: 0;}
+.boxMap .text-block p               { font-size: 16px; margin-top: 50px; font-family: 'Times New Roman'}
+.close-box                           { width: 26px;
+                                        height: 26px;
+                                        position: absolute;
+                                        left: 50%;
+                                        margin-left: -13px;
+                                        bottom: -13px;
+                                        border-radius: 50%;
+                                        background-image: url(../images/close.svg);
+                                        background-size: 50% 50%;
+                                        background-position: 50% 50%;
+                                        background-repeat: no-repeat;
+                                        border: none;
+                                        background-color: #E1E1E1;}
+
+
+.mini-slider .slide             { width: 100%;
+                                  height: 315px;
+                                  border-radius: 25px;
+                                  background-size: cover;
+                                  background-repeat: no-repeat;
+                                  background-position: 50% 50%;}
+
+.mini-slider .slick-dots        { top: 100%; margin-top: -15px;}
+.mini-slider .slick-dots li     { display: inline-block;
+                                  vertical-align: middle;
+                                  height: auto;
+                                  width: 22px; 
+                                  text-align: center;
+                                  margin: 0 5px;}
+.mini-slider .slick-dots li button { width: 12px;
+                                    height: 12px;
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                    background-color: #F1F1F1;
+                                    border: 2px solid #000;
+                                    vertical-align: middle;
+                                    -webkit-transition: background-color 0.3s ease;
+                                         -o-transition: background-color 0.3s ease;
+                                            transition: background-color 0.3s ease;}
+
+.mini-slider .slick-dots li button:before {display: none;}
+.mini-slider .slick-dots li.slick-active button {width: 20px; height: 20px; background-color: #1E1E1E; border: 3px solid #F1F1F1}
+
+
+
+@media (max-height: 850px) {
+  .mini-slider .slide             { height: 250px;}
+}
+
+@media (max-width: 800px) {
+  .mini-slider .slide             { height: 170px;}
+}
+
+
+@media (orientation: landscape) and (max-height: 550px) {
+  .mini-slider .slide        { height: 170px; width: 100%;}
+  .boxMap                       { width: 320px;}
+}
+@media (max-width: 400px) {
+  .boxMap                       { width: 90%;}
 }
 
