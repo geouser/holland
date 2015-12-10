@@ -166,6 +166,23 @@ $('#gmap').height( $(window).height() * 0.8 );
   });
 
 
+
+    $('#fullpage').fullpage({
+      anchors: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i'],
+      //navigationTooltips: ['First', 'Second', 'Third'],
+      //menu: '#myMenu',
+      slideSelector: '.section',
+      scrollOverflow: false,
+      //responsiveWidth: 1600,
+      //responsiveHeight: 800,
+      normalScrollElements: '.scrollbar'
+    });
+
+
+
+
+
+
   function falseHover(el){
     $(el).toggleClass('hover').siblings().removeClass('hover');
   }

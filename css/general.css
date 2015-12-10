@@ -265,7 +265,7 @@ span.apartTip                       {   display: block;
                                             margin: 0 auto;
                                             text-align: left;
                                         }
-.about > .left_side                     {
+.about .left_side                       {
                                             background-image: url(../images/about/bg.jpg);
                                             background-size: 100%;
                                             background-repeat: no-repeat;
