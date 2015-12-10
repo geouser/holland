@@ -1078,6 +1078,7 @@ span.apartTip                       {   display: block;
 
 .about_2 .about__house h2     { font-size: 30px;
                                 line-height: 32px;}
+.about_2 .content .wrap       { display: inline-block; vertical-align: middle; width: 98%;}
 .about_2 .content h2          { display: inline-block; width: 29%; margin: 0 -2px; vertical-align: middle; padding-right: 20px;}
 .about_2 .content .info       { display: inline-block; width: 69%; margin: 0 -2px; vertical-align: middle;}
 .about_2 .about__house .left_side {border-right: 1px solid #fff;}
@@ -1151,6 +1152,29 @@ span.apartTip                       {   display: block;
     .about_slider .slick-dots           { bottom: -20px; margin: 0;}
 }
 
+
+@media (max-width: 1300px) {
+    .about_1,
+    .about_2                            { min-height: 600px;}
+    .about_2 .about__house .content h2  { width: 100%;}
+    .about_2 .content .info             { width: 100%;}
+}
+
+@media (max-width: 1000px) {
+    .about__house .num                  { left: 0;}
+    .about__house > h2                  { padding-left: 8%;}
+    .about__house .content              { padding-left: 8%;}
+    .about_1,
+    .about_2                            { min-height: auto; height: auto;}
+
+    .about > .left_side                 { height: auto; padding: 10% 0 20%;}
+ 
+    .about > .right_side                { height: 750px;}
+
+    .about_2 .about__house .box         { height: 100%;}
+    .about_2 .about__house .left_side,
+    .about_2 .about__house .right_side {width: 50%; height: 100%;}
+}
 
 
 /*------------------------- History slide --------------------------*/
