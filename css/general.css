@@ -1483,11 +1483,16 @@ span.apartTip                       {   display: block;
                                             margin-left: 0!important;}
 
     .h-map #cover                       { width: 100%!important; height: auto!important;}
-    .h-map .box a .wrap .title          { width: 130px; left: 50%; margin-left: -65px;}
+    .h-map .box a .wrap .title          { width: 151px; left: 50%; margin-left: -75px;}
+    .h-map .box a#link005 .wrap .title  { width: 115%; left: -7.5%; margin-left: 0;}
 
 }
 @media (max-width: 600px) {
-
+    .h-map                              { width: 120%!important;
+                                            height: auto!important;
+                                            position: static;
+                                            margin-left: -10%!important;}
+    .h-map .box a .wrap .title          { width: 120px; left: 50%; margin-left: -60px;}
 }
 @media (max-width: 500px) {
     .section.history .slide_row         { height: 210px;}
