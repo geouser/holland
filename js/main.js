@@ -67,7 +67,8 @@ $('.apartment').hover(function(){
 
 $('.offerSlider').slick({
   fade: true,
-  arrows: false
+  arrows: false,
+  dots: false
 });
 
   if ($('.mini-slider').length > 0) {
