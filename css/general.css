@@ -1028,7 +1028,7 @@ span.apartTip                       {   display: block;
                             background-size: auto 29px;
                             background-repeat: no-repeat;
                             background-position: 50% 98%;}
-.about__house .wrap     { vertical-align: middle; display: inline-block;}
+.about__house .wrap     { vertical-align: middle; display: inline-block; width: 98%;}
 .about__house h2        { font-size: 40px;
                             color: #fff;
                             font-weight: normal;
@@ -1136,7 +1136,7 @@ span.apartTip                       {   display: block;
 
     .about__house h2                    { font-size: 35px;}
     .about__house address               { margin-bottom: 10px;}
-    .about__house p                     { line-height: 18px; margin-bottom: 10px;}
+    .about__house p                     { line-height: 18px; margin-bottom: 10px; max-width: 100%;}
     .about__house button                { height: 35px; padding: 0 15px; font-size: 13px;}
     .about__house button img            { width: 15px; height: 15px;}
 
@@ -1159,8 +1159,8 @@ span.apartTip                       {   display: block;
 @media (max-width: 1300px) {
     .about_1,
     .about_2                            { min-height: 600px;}
-    .about_2 .about__house .content h2  { width: 100%;}
-    .about_2 .content .info             { width: 100%;}
+    .about_2 .about__house .content h2  { width: 99%;}
+    .about_2 .content .info             { width: 99%;}
 }
 
 @media (max-width: 1000px) {
@@ -1183,7 +1183,34 @@ span.apartTip                       {   display: block;
     .about > .right_side                { height: 740px;}
     .about__house .num                  { top: 3px; left: 3px; margin-top: 0;}
 }
+@media (max-width: 600px) {
 
+}
+@media (max-width: 500px) {
+    .about__house .num                  { z-index: 0;}
+    .about > .right_side                { height: 900px;}
+    .about__house button                { display: inline-block; margin: 8px auto;}
+
+    .about_2 > .right_side              { height: 800px;}
+    .about_2 .about__house:nth-child(1) { height: 50%;}
+    .about_2 .about__house:nth-child(2),
+    .about_2 .about__house:nth-child(3) { height: 25%;}
+
+    .about__house:hover .content,
+    .about__house.hover .content,
+    .about__house .content             { opacity: 1!important;
+                                         z-index: 1!important;}
+    .about__house:hover > h2,
+    .about__house.hover > h2,
+    .about__house > h2                  {display: none!important;}
+
+    .about_2 .about__house .box:hover:after,
+    .about_2 .about__house .box.hover:after,
+    .about_2 .about__house .box:after   {opacity: 1;}
+
+    .about_2 .about__house .box h2     { font-size: 15px; padding-left: 0; text-align: center;}
+    .about_2 .about__house h2          { text-align: center;}
+}
 
 
 
@@ -1432,19 +1459,10 @@ span.apartTip                       {   display: block;
 
 
 
-
-
-
-
-@media (max-height: 800px)  {
-    #locationMap                        { margin-bottom: -60px;}
-}
-
 @media (max-width: 1600px) {
     .location .wrapper                  { width: 82%; padding-top: 7%; padding-left: 0;}
     .location_slider li a               { font-size: 14px;}
     .location h3                        { font-size: 15px;}
-    #locationMap                        { margin-left: -150px;}
 
     .h-map .box a .wrap .title          { font-size: 14px;}
 }
@@ -1464,6 +1482,7 @@ span.apartTip                       {   display: block;
                                             margin-left: 0!important;}
 
     .h-map #cover                       { width: 100%!important; height: auto!important;}
+    .h-map .box a .wrap .title          { width: 130px; left: 50%; margin-left: -65px;}
 
 }
 @media (max-width: 600px) {
