@@ -494,11 +494,11 @@ header.hasScrolled               {    position: fixed; z-index: 100;}
                          bottom: -100%;
                          margin: auto;
                          background: rgb(30,87,153); /* Old browsers */
-                         background: -moz-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.56) 37%, rgba(255,252,252,0) 69%); /* FF3.6-15 */
-                         background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%,rgba(0,0,0,.6) 0%,rgba(0,0,0, .56) 37%,rgba(255,252,252,0) 69%); /* Chrome10-25,Safari5.1-6 */
-                         background: radial-gradient(ellipse at center, rgba(30,87,153,1) 0%,rgba(0,0,0, .6) 0%,rgba(0,0,0, .56) 37%,rgba(255,252,252,0) 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                         background: -moz-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.56) 37%, rgba(0,0,0,0) 69%); /* FF3.6-15 */
+                         background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%,rgba(0,0,0,.6) 0%,rgba(0,0,0, .56) 37%,rgba(0,0,0,0) 69%); /* Chrome10-25,Safari5.1-6 */
+                         background: radial-gradient(ellipse at center, rgba(30,87,153,1) 0%,rgba(0,0,0, .6) 0%,rgba(0,0,0, .56) 37%,rgba(0,0,0,0) 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                     }
-.offer h1.shadow:after {max-width: 200%; max-width: 160%;}
+.offer h1.shadow:after {max-width: 200%; max-width: 160%; left: -108%;}
 
 @media (max-width: 1400px) {
         .offer h1      {font-size: 45px; line-height: 1;}
@@ -518,6 +518,7 @@ header.hasScrolled               {    position: fixed; z-index: 100;}
 @media (max-width: 820px) {
         .offer h1      {font-size: 40px; position: absolute; left: 0; right: 0; margin: 30px auto; top: 220px; width: 400px; text-align: center;}
         .offer h1 span {font-size: 18px;}
+        .offer h1.shadow:after {left: -100%;}
 }
 @media (max-width: 740px) {
         .offer h1      {top: 160px;}
