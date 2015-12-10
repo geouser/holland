@@ -1903,23 +1903,22 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
     .contacts .main                     { font-size: 32px;}
 }
 
-.mfp-hide {
-    display: block !important;
-}
 
 
+
+
+.popup                            { position: relative; width: 370px; display: block; margin: 0 auto;}
 .boxMap                           { display: block;
-                                        width: 370px;
                                         position: relative;
                                         z-index: 10;
                                         padding-bottom: 15px;
                                         text-align: left;
                                         background-color: rgba(255,255,255,0.85);
                                         border-radius: 35px;
-                                        border: 10px solid #A39F7A;
+                                        border: 10px solid #3b4a78;
                                         -webkit-background-clip: padding-box;
                                                 background-clip: padding-box;}
-.boxMap .text-block                 { text-align: left; padding: 10px 15px;}
+.boxMap .text-block                 { text-align: left; padding: 10px 15px; height: 180px; position: relative;}
 .boxMap .text-block h3              { font-size: 30px;
                                        font-variant: small-caps;
                                        line-height: 20px;
@@ -1937,23 +1936,10 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
                                        background-color: #000;
                                        left: 0;}
 .boxMap .text-block p               { font-size: 16px; margin-top: 50px; font-family: 'Times New Roman'}
-.close-box                           { width: 26px;
-                                        height: 26px;
-                                        position: absolute;
-                                        left: 50%;
-                                        margin-left: -13px;
-                                        bottom: -13px;
-                                        border-radius: 50%;
-                                        background-image: url(../images/close.svg);
-                                        background-size: 50% 50%;
-                                        background-position: 50% 50%;
-                                        background-repeat: no-repeat;
-                                        border: none;
-                                        background-color: #E1E1E1;}
 
 
 .mini-slider .slide             { width: 100%;
-                                  height: 315px;
+                                  height: 220px;
                                   border-radius: 25px;
                                   background-size: cover;
                                   background-repeat: no-repeat;
@@ -1981,21 +1967,14 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 .mini-slider .slick-dots li.slick-active button {width: 20px; height: 20px; background-color: #1E1E1E; border: 3px solid #F1F1F1}
 
 
-
-@media (max-height: 850px) {
-  .mini-slider .slide             { height: 250px;}
-}
-
-@media (max-width: 800px) {
-  .mini-slider .slide             { height: 170px;}
-}
+#gmap                               { width: 80%; margin: auto; position: relative;}
+#gmap-canvas                        { width: 100%; height: 100%;}
 
 
 @media (orientation: landscape) and (max-height: 550px) {
   .mini-slider .slide        { height: 170px; width: 100%;}
-  .boxMap                       { width: 320px;}
 }
 @media (max-width: 400px) {
-  .boxMap                       { width: 90%;}
+  .popup                       { width: 98%;}
 }
 

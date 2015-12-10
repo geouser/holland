@@ -101,13 +101,19 @@ $(".slideNav li").click(function(e){
     
     midClick: true,
     removalDelay: 300,
-    mainClass: 'my-mfp-slide-bottom'
+    mainClass: 'my-mfp-slide-bottom',
+
+    callbacks: {
+      open: function() {
+        $('.mini-slider').get(0).slick.setPosition();
+      }
+    }
   });
 
-$('#map-popup').height( $(window).height() * 0.7 );
+$('#gmap').height( $(window).height() * 0.8 );
   
   $('.magnific-map').magnificPopup({
-    type: 'iframe',
+    type: 'inline',
 
     fixedContentPos: false,
     fixedBgPos: false,
@@ -122,9 +128,12 @@ $('#map-popup').height( $(window).height() * 0.7 );
     removalDelay: 300,
     mainClass: 'my-mfp-slide-bottom',
 
-    open: function(){
-            googleMap_popup()
-          }
+    callbacks: {
+      open: function() {
+        console.log('opened');
+        googleMap_popup()
+      }
+    }
   });
 
 
@@ -200,7 +209,7 @@ $(function() { // add class on scroll
   });
 });
 
-$('a').click(function(){
+$('nav a').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 800);
@@ -272,7 +281,7 @@ $('a').click(function(){
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 
-      var map = new google.maps.Map(document.getElementById('map-popup'), mapOptions);
+      var map = new google.maps.Map(document.getElementById('gmap-canvas'), mapOptions);
 
       var markerImage = new google.maps.MarkerImage('images/blue-marker.svg');
       var marker = new google.maps.Marker({
@@ -283,7 +292,7 @@ $('a').click(function(){
       });
 
       $(window).resize(function (){
-        $('#map-popup').height( $(window).height() * 0.7 );
+        $('#gmap').height( $(window).height() * 0.8 );
         map.setCenter(mapCenterCoord);
       });
   };
