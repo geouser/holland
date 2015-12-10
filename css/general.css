@@ -212,7 +212,7 @@ h2                          {   font-family: "CenturyGothicRegular";
                                              vertical-align: middle;
                                         }
 .href img                               {    margin-right: 7px }
-.href.blue                              {    background-color: #3B4A78;
+.href.blue                              {    background-color: #A39F7A;
                                              color: #fff;
                                         }
 .href:before                            {    content: "";
@@ -1694,6 +1694,11 @@ span.apartTip                       {   display: block;
 @media (max-width: 360px)  {
     .processBlockInfo      {top: 81%;}
     .processBlockInfo.hid  {top: 81%;}
+}
+
+@media (min-height: 700px) and (max-width: 1000px) {
+    .processBlockInfo      {top: 81%;}
+    .processBlockInfo.hid  {top: 81%;}   
 }
 
 .infoTabs .ui-tabs-nav {
