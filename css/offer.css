@@ -97,9 +97,8 @@
 html, body                    {    height: 100%;}
 body                          {    margin: 0;
                                    padding: 0;
-                                   -ms-overflow: hidden;
-                                       overflow: hidden;
                                    max-width: 100%;
+                                   overflow: visible;
                                    font-family: 'robotoregular';
                               }
 @media (max-width: 1350px) {

@@ -166,6 +166,7 @@ $('#gmap').height( $(window).height() * 0.8 );
   });
 
   function fullpage() {
+      $('body').css('overflow', 'hidden');
       var divs = $('.section');
       var dir = 'up'; // wheel scroll direction
       var div = 0; // current div
