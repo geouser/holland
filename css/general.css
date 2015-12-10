@@ -212,27 +212,11 @@ h2                          {   font-family: "CenturyGothicRegular";
                                              vertical-align: middle;
                                         }
 .href img                               {    margin-right: 7px }
-.href.blue                              {    background-color: #A39F7A;
+.href:hover                             {    opacity: .8;}
+.href.blue                              {    background-color: #3B4A78;
                                              color: #fff;
                                         }
-.href:before                            {    content: "";
-                                             position: absolute;
-                                             left: 50%;
-                                             right: 50%;
-                                             bottom: 0;
-                                             background: #B2AF7E;
-                                             height: 4px;
-                                             -webkit-transition: all .3s ease-out;
-                                             -moz-transition: all .3s ease-out;
-                                             -ms-transition: all .3s ease-out;
-                                             -o-transition: all .3s ease-out;
-                                             transition: all .3s ease-out;
-                                        }
-.href:hover:before, .href:focus:before, .href:active:before
-                                        {    left: 0;
-                                             right: 0;
-                                        }
-.href.blue:before                       {    background: #fff }
+.href.blue:hover                        {    background-color: #949272; opacity: 1;}
 
 
     .wrapper.short               { width: 73%; margin: 0 auto; text-align: left; padding-top: 10%;}
