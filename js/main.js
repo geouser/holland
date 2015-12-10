@@ -70,6 +70,16 @@ $('.offerSlider').slick({
   arrows: false
 });
 
+  if ($('.mini-slider').length > 0) {
+    $('.mini-slider').slick({
+      arrows: false,
+      dots: true,
+      autoplay: false,
+      fade: true,
+      autoplaySpeed: 4000
+    });
+  };
+
 $(".slideNav li").click(function(e){
     e.preventDefault();
     slideIndex = $(this).index();

@@ -30,7 +30,7 @@
 
 
         <div class="section offer vertical" id="offer"> <!-- offer -->
-            <header>
+            <header><!-- header -->
                 <nav class="vertical">
                     <li><a href="#offer">Главная</a></li>
                     <li><a href="#about">О проекте</a></li>
@@ -43,7 +43,8 @@
                 <a href="" class="tel vertical">
                     <span>8 (812) 244-20-10</span>
                 </a>
-            </header>
+            </header><!-- end header -->
+
             <button class="menu-button">
                 <span class="menu-line top_line"></span>
                 <span class="menu-line middle_line"></span>
@@ -55,8 +56,11 @@
             
             <h1 class="shadow">НОВЫЙ КОМПЛЕКС <br> DELUXE КЛАССА <span>в парадном районе Санкт-Петербурга</span></h1>
 
-            <div class="offerSlider">
-                <div class="slide">
+
+
+            <div class="offerSlider"><!-- offer sldier -->
+
+                <div class="slide" style="background-image: url('images/slider/slide-1.jpg');"> <!-- slide photo -->
                     <div class="slideInfo">
                         <ul class="slideNav">
                             <li></li>
@@ -78,7 +82,8 @@
                         </div>
                     </div>
                 </div><!-- end slide 1 -->
-                <div class="slide">
+
+                <div class="slide" style="background-image: url('images/slider/slide-2.jpg');"><!-- slide photo -->
                     <div class="slideInfo">
                         <ul class="slideNav">
                             <li></li>
@@ -103,7 +108,8 @@
                         </div>
                     </div>
                 </div><!-- end slide 2 -->
-                <div class="slide">
+
+                <div class="slide" style="background-image: url('images/slider/slide-3.jpg');"> <!-- slide photo -->
                     <div class="slideInfo">
                         <ul class="slideNav">
                             <li></li>
@@ -735,7 +741,20 @@
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
-        <div id="map-popup" class="mfp-hide zoom-anim-dialog"></div>
+        <div id="map-popup" class="mfp-hide zoom-anim-dialog">
+            <div class="boxMap boxMap-1">
+                <button class="close-box"></button>
+                <div class="mini-slider">
+                    <div class="slide" style="background-image: url(images/about/art-1-slide-1.jpg)"></div>
+                    <div class="slide" style="background-image: url(images/about/art-1-slide-1.jpg)"></div>
+                    <div class="slide" style="background-image: url(images/about/art-1-slide-1.jpg)"></div>
+                </div>
+                <div class="text-block mini-slim">
+                    <h3>Дом ЖАКО</h3>
+                    <p>Небольшой абзац, раскрывающий суть блока. Это разновидность текста, который по умолчанию должен присутствовать на корпоратив- ном сайте.</p>
+                </div>
+            </div>
+        </div>
 
         <script src="js/modernizr.min.js"></script>
         <script src="js/vendor/jquery-1.11.3.min.js"></script>
