@@ -1976,5 +1976,6 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 }
 @media (max-width: 400px) {
   .popup                       { width: 98%;}
+  #gmap                        { width: 98%;}
 }
 
