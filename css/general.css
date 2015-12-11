@@ -1665,6 +1665,7 @@ strong                              { font-family: 'CenturyGothic-Bold';}
 .popup_body                         { background-color: #fff;
                                         padding: 3%;
                                         text-align: center;}
+.popup_body h3                      { text-transform: uppercase; font-size: 18px;}
 .popup_body em                      { font-style: italic;}
 
 
@@ -1711,5 +1712,15 @@ strong                              { font-family: 'CenturyGothic-Bold';}
                                         top: 0;}
 
 @media (max-width: 1600px) {
-    .floor_popup                    { width: 80%;}
+    .floor_popup                    { width: 70%;}
+    .popup_header .general h2       { font-size: 22px;}
+    .floor_popup p                  { font-size: 14px;}
+    .popup_header .square strong    { font-size: 18px;}
+    .popup_header                   { height: 70px;}
+    .ap_info                        { margin-top: 5px;}
+    .map_area                       { margin-top: 10px;}
+
+    .ap_info_name p                 { font-size: 16px;}
+    .ap_info_square p               { font-size: 20px;}
+    .floor_popup .nav               { padding-top: 20px;}
 }
