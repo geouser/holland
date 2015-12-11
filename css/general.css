@@ -737,12 +737,16 @@ span.apartTip                       {   display: block;
                                             text-align: center;
                                             position: relative;
                                             z-index: 1;
-                                            filter: grayscale(100%);
+                                            -webkit-filter: grayscale(100%);
+                                                 -o-filter: grayscale(100%);
+                                                    filter: grayscale(100%);
                                             -webkit-transition: all 0.3s ease;
                                             -o-transition: all 0.3s ease;
                                             transition: all 0.3s ease;
                                         }
-.slide_row a.active                     {   filter: grayscale(0%);}
+.slide_row a.active                     {   -webkit-filter: grayscale(0%);
+                                                 -o-filter: grayscale(0%);
+                                                    filter: grayscale(0%);}
 .slide_row-1 a:nth-child(1)             {
                                             width: 33.333%;
                                             border-right: 1px solid #fff;
@@ -1443,6 +1447,7 @@ span.apartTip                       {   display: block;
                                             font-family: 'robotobold';
                                             border: none;
                                         }
+.contacts form button:hover             {   background-color: #949272; opacity: 1;}
 .contacts form button *                 {
                                             display: inline-block;
                                             vertical-align: middle;
