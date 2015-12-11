@@ -41,6 +41,12 @@ $(function(){
 });
 
 
+var fullHeight = true;
+
+if (params.isMobile) {
+  var fullHeight = false;
+}
+
 
 /*
 ########################################
@@ -164,45 +170,6 @@ $('#gmap').height( $(window).height() * 0.8 );
     e.preventDefault();
     $.magnificPopup.close();
   });
-
-  function fullpage() {
-      $('body').css('overflow', 'hidden');
-      var divs = $('.section');
-      var dir = 'up'; // wheel scroll direction
-      var div = 0; // current div
-      $(document.body).on('DOMMouseScroll mousewheel', function (e) {
-          if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
-              dir = 'down';
-          } else {
-              dir = 'up';
-          }
-          // find currently visible div :
-          div = -1;
-          divs.each(function(i){
-              if (div<0 && ($(this).offset().top >= $(window).scrollTop())) {
-                  div = i;
-              }
-          });
-          if (dir == 'up' && div > 0) {
-              div--;
-          }
-          if (dir == 'down' && div < divs.length) {
-              div++;
-          }
-          //console.log(div, dir, divs.length);
-          $('html,body').stop().animate({
-              scrollTop: divs.eq(div).offset().top
-          }, 700);
-          return false;
-      });
-      $(window).resize(function () {
-          $('html,body').scrollTop(divs.eq(div).offset().top);
-      });
-  };
-
-  if ( $(window).width() > 1350 || $(window).height() > 650 ) {
-    fullpage();
-  };
 
 
 
@@ -399,6 +366,51 @@ $('nav a, .scrollDown').click(function(){
   $(window).resize(function(event) {
     cover( $('.h-map') );
   });
+
+
+  
+function fullpage() {
+      $('body').css('overflow', 'hidden');
+      var divs = $('.section');
+      var dir = 'up'; // wheel scroll direction
+      var div = 0; // current div
+      $(document.body).on('DOMMouseScroll mousewheel', function (e) {
+          if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+              dir = 'down';
+          } else {
+              dir = 'up';
+          }
+          // find currently visible div :
+          div = -1;
+          divs.each(function(i){
+              if (div<0 && ($(this).offset().top >= $(window).scrollTop())) {
+                  div = i;
+              }
+          });
+          if (dir == 'up' && div > 0) {
+              div--;
+          }
+          if (dir == 'down' && div < divs.length) {
+              div++;
+          }
+          //console.log(div, dir, divs.length);
+          $('html,body').stop().animate({
+              scrollTop: divs.eq(div).offset().top
+          }, 700);
+          return false;
+      });
+      $(window).resize(function () {
+          $('html,body').scrollTop(divs.eq(div).offset().top);
+      });
+
+
+  };
+
+  if (fullHeight && $(window).width() > 1300 && $(window).height() > 650  ) {
+    fullpage();
+  };
+
+
 
 
 });
