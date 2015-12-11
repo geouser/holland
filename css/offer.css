@@ -158,13 +158,13 @@ h2                          {   font-family: "CenturyGothicRegular";
 
 
 @media (max-width: 1340px) and (max-width: 650px)  {
-    .section                {padding-top: 0;}
+    .about__house:nth-child(1) .content {padding-top: 0px;}
 }
 @media (min-width: 1340px) and (min-width: 650px)  {
-    .section                {padding-top: 45px;}
+    .about__house:nth-child(1) .content {padding-top: 22px;}
 }
 @media (min-width: 1600px) and (min-width: 650px)  {
-    .section                {padding-top: 60px;}
+    .about__house:nth-child(1) .content {padding-top: 30px;}
 }
 
 

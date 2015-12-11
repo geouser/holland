@@ -631,27 +631,22 @@ span.apartTip                       {   display: block;
     .about_2 .about__house:nth-child(3) { height: 25%;}
 
     .about__house:hover .content,
-    .about__house.hover .content,
-    .about__house .content             { opacity: 1!important;
+    .about__house.hover .content       { opacity: 1!important;
                                          z-index: 1!important;}
     .about__house:hover > h2,
-    .about__house.hover > h2,
-    .about__house > h2                  {display: none!important;}
+    .about__house.hover > h2           {display: none!important;}
 
     .about__house:hover > h2:after,
-    .about__house.hover > h2:after,
-    .about__house > h2:after            { display: none;}       
+    .about__house.hover > h2:after    { display: none;}       
 
     .about_2 .about__house .box:hover:after,
-    .about_2 .about__house .box.hover:after,
-    .about_2 .about__house .box:after   {opacity: 1;}
+    .about_2 .about__house .box.hover:after   {opacity: 1;}
 
     .about_2 .about__house .box h2     { font-size: 15px; padding-left: 0; text-align: center;}
     .about_2 .about__house h2          { text-align: center;}
 
     .about_2 .about__house .box:hover h2:after,
-    .about_2 .about__house .box.hover h2:after,
-    .about_2 .about__house .box h2:after   {display: none;}
+    .about_2 .about__house .box.hover h2:after   {display: none;}
 }
 
 
