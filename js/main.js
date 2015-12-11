@@ -91,8 +91,9 @@ jQuery(document).ready(function($) {
         }]*/
      });
 
-    $('area').on('mouseenter', function(event) {
+    $('area').on('mouseenter click touch', function(event) {
       event.preventDefault();
+      $('.mapH').mapster('highlight',false)
       $(this).mapster('highlight');
     });
     $('area').on('mouseleave', function(event) {
@@ -145,7 +146,8 @@ $('.offerSlider').slick({
   dots: false
 });
 
-  if ($('.mini-slider').length > 0) {
+
+  function miniSlider(){
     $('.mini-slider').slick({
       arrows: false,
       dots: true,
@@ -153,7 +155,9 @@ $('.offerSlider').slick({
       fade: true,
       autoplaySpeed: 4000
     });
-  };
+  }
+  miniSlider();
+  
 
 $(".slideNav li").click(function(e){
     e.preventDefault();
@@ -180,7 +184,8 @@ $(".slideNav li").click(function(e){
 
     callbacks: {
       open: function() {
-        $('.mini-slider').get(0).slick.setPosition();
+        $('.mini-slider').slick('unslick')
+        miniSlider();
 
         // function for image maps in popups
         imageMap();
