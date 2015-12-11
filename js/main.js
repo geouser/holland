@@ -59,14 +59,56 @@ if (params.isMobile) {
 jQuery(document).ready(function($) {
 
   function imageMap(){
-    $('.mapH').maphilight({
+    /*$('.mapH').maphilight({
       fill: true,
       fillColor: 'ffffff',
       fillOpacity: 0.5,
       stroke: false
     });
-    $('img[usemap]').rwdImageMaps();  
+    $('img[usemap]').rwdImageMaps(); */
+    $('.mapH').mapster({
+      highlight: true,
+       stroke: false,
+        fillColor: '222222',
+        render_highlight: {
+            fillOpacity: 0.5,
+            fillColor: 'ffffff',
+        },
+
+       isSelectable: false,
+       singleSelect: true,
+       clickNavigate: true,
+       /*mapKey: 'data-mapster-key',
+        areas: [
+        {
+            key: 'free',
+            isSelectable: true,
+        },
+        {
+            key: 'sold',
+            isSelectable: false,
+            fillColor: '222222',
+        }]*/
+     });
+
+    $('area').on('mouseenter', function(event) {
+      event.preventDefault();
+      $(this).mapster('highlight');
+    });
+    $('area').on('mouseleave', function(event) {
+      event.preventDefault();
+      $('.mapH').mapster('highlight',false)
+    });
+
+    $(window).resize(function(event) {
+      $('.mapH').mapster('resize', $('.map_area').width(), 0, 0); 
+    });
+    
   }
+  
+  
+
+
 
 
 $('.offer h1').css('opacity', '1');
