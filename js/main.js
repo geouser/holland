@@ -58,6 +58,14 @@ if (params.isMobile) {
 
 jQuery(document).ready(function($) {
 
+$('.mapH').maphilight({
+  fill: true,
+  fillColor: 'ffffff',
+  fillOpacity: 0.5,
+  stroke: false
+});
+$('img[usemap]').rwdImageMaps();
+
 $('.offer h1').css('opacity', '1');
 $('.slideInfo').css('opacity', '1');
 
@@ -66,14 +74,25 @@ $('.scrollbar').perfectScrollbar();
 
 $('.apartment.visible').find('.apartmentInfoWrap ul').fadeIn('slow');
 
-$('.apartment').hover(function(){
-  $(this).css('width', '58%').addClass('visible').removeClass('hid').siblings().removeClass('visible').addClass('hid');
-  $(this).siblings('.apartment').css('width', '21%');
-  if ($(this).hasClass('visible')) {
-    $(this).find('.apartmentInfoWrap ul').fadeIn('slow');
-    $(this).siblings().find('.apartmentInfoWrap ul').fadeOut('fast')
-  } 
+
+var myTimeout;
+
+$('.apartment').mouseenter(function() {
+    var thisHovered = $(this);
+    myTimeout = setTimeout(function() {
+        thisHovered.css('width', '58%').addClass('visible').removeClass('hid').siblings().removeClass('visible').addClass('hid');
+        thisHovered.siblings('.apartment').css('width', '21%');
+        if (thisHovered.hasClass('visible')) {
+          $(thisHovered).find('.apartmentInfoWrap ul').fadeIn('slow');
+          $(thisHovered).siblings().find('.apartmentInfoWrap ul').fadeOut('fast')
+        } 
+    }, 100);
+}).mouseleave(function() {
+    clearTimeout(myTimeout);
 });
+
+
+
 
 $('.offerSlider').slick({
   fade: true,
