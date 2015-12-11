@@ -631,6 +631,8 @@ span.apartTip                       {   display: block;
     .about_2 .about__house:nth-child(2),
     .about_2 .about__house:nth-child(3) { height: 25%;}
 
+    .about_2 .about__house > h2        { margin: 0; text-align: center; width: 97%;}
+
     .about__house:hover .content,
     .about__house.hover .content       { opacity: 1!important;
                                          z-index: 1!important;}
