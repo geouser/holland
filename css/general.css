@@ -1087,13 +1087,12 @@ span.apartTip                       {   display: block;
                                         -o-transition: all ease-out .3s;
                                         transition: all ease-out .3s;
                                     }
-.processBlockInfo.visible           {
+.processBlock:hover .processBlockInfo  {
                                         bottom: 0;
                                         top: 0;
                                         background-color: rgba(59, 74, 120, 0.8);
                                         padding-top: 7%;
                                     }
-.processBlockInfo.hid               {    top: 78% }
 .processBlockInfo h5                {
                                         font: 18px 'robotobold';
                                         margin-bottom: 40px;
@@ -1122,20 +1121,15 @@ span.apartTip                       {   display: block;
                                         -o-transform: rotate(-180deg);
                                         transform: rotate(-180deg);
                                     }
-.processBlockInfo h5 button.visible {
+.processBlock:hover .processBlockInfo h5 button {
                                         -webkit-transform: rotate(0deg);
                                         -moz-transform: rotate(0deg);
                                         -ms-transform: rotate(0deg);
                                         -o-transform: rotate(0deg);
                                         transform: rotate(0deg);
                                     }
-.processBlockInfo h5 button.hid     {
-                                        -webkit-transform: rotate(-180deg);
-                                        -moz-transform: rotate(-180deg);
-                                        -ms-transform: rotate(-180deg);
-                                        -o-transform: rotate(-180deg);
-                                        transform: rotate(-180deg);
-                                    }
+
+
 .processBlockInfo ul                {
                                         list-style-type: none;
                                         text-align: left;
@@ -1168,7 +1162,6 @@ span.apartTip                       {   display: block;
 
 @media (min-height: 1150px)  {   
     .processBlockInfo      {top: 83%;}
-    .processBlockInfo.hid  {top: 83%;}
 }
 
 @media (max-height: 1000px)  {
@@ -1253,12 +1246,10 @@ span.apartTip                       {   display: block;
 }
 @media (max-width: 360px)  {
     .processBlockInfo      {top: 81%;}
-    .processBlockInfo.hid  {top: 81%;}
 }
 
 @media (min-height: 700px) and (max-width: 1000px) {
-    .processBlockInfo      {top: 81%;}
-    .processBlockInfo.hid  {top: 81%;}   
+    .processBlockInfo      {top: 81%;} 
 }
 
 

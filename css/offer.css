@@ -716,3 +716,13 @@ a.place             {    color: #304071;
     .slideInfoBody         {padding: 10px;}
 
 }
+
+
+.slideInfo,
+.offer h1                              {    opacity: 0;
+                                            -webkit-transition: all ease-out .6s;
+                                               -moz-transition: all ease-out .6s;
+                                                -ms-transition: all ease-out .6s;
+                                                 -o-transition: all ease-out .6s;
+                                                    transition: all ease-out .6s;
+                                        }

@@ -58,6 +58,10 @@ if (params.isMobile) {
 
 jQuery(document).ready(function($) {
 
+$('.offer h1').css('opacity', '1');
+$('.slideInfo').css('opacity', '1');
+
+
 $('.scrollbar').perfectScrollbar();
 
 $('.apartment.visible').find('.apartmentInfoWrap ul').fadeIn('slow');
@@ -224,14 +228,7 @@ $('nav a, .scrollDown').click(function(){
     return false;
 });
 
- $('.processBlockInfo h5 button').click(function(){
-    if($(this).hasClass('visible')) {
-      $(this).addClass('hid').removeClass('visible').parent().parent().addClass('hid').removeClass('visible');
-    } else {
-      $(this).addClass('visible').removeClass('hid').parent().parent().addClass('visible').removeClass('hid');
-    }
 
- });
 
   $(function() {
     $( ".infoTabs" ).tabs();
