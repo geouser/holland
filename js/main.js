@@ -91,9 +91,23 @@ jQuery(document).ready(function($) {
         }]*/
      });
 
-    $('area').on('mouseenter', function(event) {
+    $('area').on('mouseenter click touch', function(event) {
       event.preventDefault();
+      $('.mapH').mapster('highlight',false)
       $(this).mapster('highlight');
+
+      var floorNum = $(this).parent('map').attr('floor');        /* номер этажа */
+      var apId = $(this).attr('id');
+      var apInfoBlock = $('.floorInfo-' + floorNum).children('.apInfo-' + apId);    /* блок с инф соответсвующий id area */
+      var apArea = apInfoBlock.children('.num-area').text();     /* площадь */
+      var apInfo = apInfoBlock.children('p').text();             /* информация о квартире */
+
+      $('.apartNum').text(apId);         /* вывод номера квартиры квартире */
+      $('.ap_info_text').text(apInfo);   /* вывод информации о квартире */
+      $('.areaNum').text(apArea);        /* вывод площади */
+
+    console.log(floorNum);
+
     });
     $('area').on('mouseleave', function(event) {
       event.preventDefault();
@@ -142,7 +156,8 @@ $('.offerSlider').slick({
   dots: false
 });
 
-  if ($('.mini-slider').length > 0) {
+
+  function miniSlider(){
     $('.mini-slider').slick({
       arrows: false,
       dots: true,
@@ -150,7 +165,9 @@ $('.offerSlider').slick({
       fade: true,
       autoplaySpeed: 4000
     });
-  };
+  }
+  miniSlider();
+  
 
 $(".slideNav li").click(function(e){
     e.preventDefault();
@@ -177,7 +194,8 @@ $(".slideNav li").click(function(e){
 
     callbacks: {
       open: function() {
-        $('.mini-slider').get(0).slick.setPosition();
+        $('.mini-slider').slick('unslick')
+        miniSlider();
 
         // function for image maps in popups
         imageMap();

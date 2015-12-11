@@ -1683,7 +1683,7 @@ strong                              { font-family: 'CenturyGothic-Bold';}
 .ap_info_square                     { display: table-cell;
                                         vertical-align: top;}
 .ap_info_name                       { width: 20%; text-align: left;}
-.ap_info_text                       { width: 60%; text-align: center;}
+.ap_info_text                       { width: 60%; text-align: center; font: 18px "CenturyGothicRegular";}
 .ap_info_square                     { width: 20%; text-align: right;}
 
 .ap_info_name p                     { font-size: 20px;}
@@ -1715,12 +1715,11 @@ img[usemap]                         { border: none;
                                         height: auto;
                                         max-width: 100%;
                                         width: auto;}
-.mapH                               { width: 100%!important;}
-.mapH canvas                        { width: 100%!important; height: 100%!important;}
 @media (max-width: 1600px) {
     .floor_popup                    { width: 70%;}
     .popup_header .general h2       { font-size: 22px;}
-    .floor_popup p                  { font-size: 14px;}
+    .floor_popup p, 
+    .ap_info_text                   { font-size: 14px;}
     .popup_header .square strong    { font-size: 18px;}
     .popup_header                   { height: 70px;}
     .ap_info                        { margin-top: 5px;}
@@ -1731,8 +1730,37 @@ img[usemap]                         { border: none;
     .floor_popup .nav               { padding-top: 20px;}
 }
 
-.mapH {
-            height: auto;
-        max-width: 100%;
-        width: auto;
+@media (max-width: 1100px) {
+    .floor_popup                    { width: 85%;}
+}
+@media (max-width: 900px) {
+    .floor_popup                    { width: 95%;}
+    .mfp-close-btn-in .mfp-close    { right: 0; left: auto; bottom: 100%; top: auto;}
+}
+@media (max-width: 800px) {
+    .ap_info                            { display: block;
+                                            width: 100%;
+                                            margin-top: 30px;}
+
+    .ap_info_name,
+    .ap_info_text,
+    .ap_info_square                     { display: block;
+                                            width: 100%;
+                                            text-align: center;
+                                            margin: 5px 0;}
+    .floor_popup .nav a                 { font-size: 14px;}
+}
+@media (max-width: 600px) {
+    .floor_popup                    { width: 98%;} 
+    .popup_header                   { height: auto; padding: 15px 0;}
+    .popup_header .general,
+    .popup_header .square               { display: block;
+                                            vertical-align: middle;
+                                            width: 100%;
+                                            text-align: center;}
+    .popup_header .square           { margin-top: 10px;}
+    .floor_popup .nav a             { font-size: 12px;}
+
+    .floor_popup .nav a:before,
+    .floor_popup .nav a:after       { display: none;}
 }
