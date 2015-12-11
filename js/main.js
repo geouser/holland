@@ -199,12 +199,12 @@ $('#gmap').height( $(window).height() * 0.8 );
     dots: true
   });
 
-  $('.history_slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    console.log(currentSlide);
+  $('.history_slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    console.log(nextSlide);
     var allA = $('.gallery').find('a');
     allA.removeClass('active');
 
-    var curFoto = $('.gallery').find('a[data-slide=' + currentSlide + ']');
+    var curFoto = $('.gallery').find('a[data-slide=' + nextSlide + ']');
     curFoto.addClass('active');
   });
 
