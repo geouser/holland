@@ -300,6 +300,8 @@ h2                          {   font-family: "CenturyGothicRegular";
         .logo       {   left: 0; right: 0; margin: auto; width: 150px;}
 }
 @media (max-width: 740px) {
+        .offer      {   background-image: url("../images/slider/mob-offer-bg.jpg");}
+        .slide      {   background: none !important;}
         .logo       {   top: 0;}
         .scrollDown   {bottom: 1vh;}
 }

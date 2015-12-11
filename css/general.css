@@ -79,11 +79,11 @@
                      height: 100%;
                      position: relative;
                      text-align: center;
-                     -webkit-transition: all .3s;
-                     -moz-transition: all .3s;
-                     -ms-transition: all .3s;
-                     -o-transition: all .3s;
-                     transition: all .3s;
+                     -webkit-transition: all ease-out .6s;
+                     -moz-transition: all ease-out .6s;
+                     -ms-transition: all ease-out .6s;
+                     -o-transition: all ease-out .6s;
+                     transition: all ease-out .6s;
                      width: 21%;
                      overflow: hidden;
                      background-repeat: no-repeat;
@@ -226,6 +226,7 @@
                                          font-size: 24px;
                                          text-align: left;
                                          color: #FFF;
+                                         list-style-type: none;
                                      }
 .row li:last-child                   {    margin-right: 0 }
 .row li:nth-child(1)                 {    width: 22%;}
@@ -1036,6 +1037,16 @@ span.apartTip                       {   display: block;
    -------------------------------------- */
        
 .process                            {    min-height: 650px;}
+    @media (max-width: 1340px) and (max-width: 650px)  {
+    .process               {top: 0;}
+    }
+    @media (min-width: 1340px) and (min-width: 650px)  {
+    .process               {padding-top: 45px;}
+    }
+    @media (min-width: 1600px) and (min-width: 650px)  {
+    .process               {padding-top: 60px;}
+    }
+
 .process .right_side                {
                                         background-image: url('../images/processBg.png');
                                         background-position: 50% 100%;
