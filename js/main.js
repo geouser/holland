@@ -108,10 +108,6 @@ jQuery(document).ready(function($) {
   
   
 
-
-
-$('img[usemap]').rwdImageMaps();  
-
 $('.offer h1').css('opacity', '1');
 $('.slideInfo').css('opacity', '1');
 
