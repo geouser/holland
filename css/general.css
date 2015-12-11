@@ -1439,6 +1439,7 @@ span.apartTip                       {   display: block;
                                             font-family: 'robotobold';
                                             border: none;
                                         }
+.contacts form button:hover             {   background-color: #949272; opacity: 1;}
 .contacts form button *                 {
                                             display: inline-block;
                                             vertical-align: middle;
