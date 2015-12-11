@@ -1617,3 +1617,86 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
   #gmap                        { width: 98%;}
 }
 
+
+
+/*---------------------- floor popup --------------------------*/
+strong                              { font-family: 'CenturyGothic-Bold';}
+.mfp-close-btn-in .mfp-close        { color: transparent;
+                                        background-image: url(../images/close.svg);
+                                        background-repeat: no-repeat;
+                                        background-size: 60% 60%;
+                                        background-position: 50% 0%;
+                                        right: auto;
+                                        left: 100%;}
+.floor_popup                        { display: block;
+                                        width: 55%;
+                                        margin: 0 auto;}
+.floor_popup p                      { font: 18px "CenturyGothicRegular";}
+
+
+
+.popup_header                       { background-color: #304071;
+                                        height: 110px;
+                                        display: table;
+                                        width: 100%;}
+.popup_header p                     { color: #fdfcfd;}
+.popup_header .general,
+.popup_header .square               { display: table-cell;
+                                        vertical-align: middle;
+                                        height: 100%;}
+
+.popup_header .general              { width: 77%; padding-left: 5%;}
+.popup_header .square               { width: 23px; text-align: center;}
+.popup_header .general h2           { font: 30px 'CenturyGothic-Bold';
+                                        margin: 0;
+                                        color: #fff;}
+.popup_header .square strong        { font-size: 25px;}
+
+
+
+.popup_body                         { background-color: #fff;
+                                        padding: 3%;
+                                        text-align: center;}
+.popup_body em                      { font-style: italic; margin-bottom: 30px;}
+
+
+.ap_info                            { display: table;
+                                        width: 100%;
+                                        margin-top: 30px;}
+
+.ap_info_name,
+.ap_info_text,
+.ap_info_square                     { display: table-cell;
+                                        vertical-align: top;}
+.ap_info_name                       { width: 20%; text-align: left;}
+.ap_info_text                       { width: 60%; text-align: center;}
+.ap_info_square                     { width: 20%; text-align: right;}
+
+.ap_info_name p                     { font-size: 20px;}
+.ap_info_square p                   { font-size: 30px;}
+
+
+.floor_popup .nav                   { padding-top: 40px;}
+.floor_popup .nav p                 { color: #304071;}
+.floor_popup .nav a                 { display: inline-block;
+                                        color: #304071;
+                                        font: 18px "CenturyGothicRegular";
+                                        position: relative;
+                                        margin: 0 10px;
+                                        border-bottom: 1px dashed #304071;}
+.floor_popup .nav a.back:before     { content: '<';
+                                        color: #304071;
+                                        font: 20px "CenturyGothicRegular";
+                                        position: absolute;
+                                        left: -20px;
+                                        top: 0;}
+.floor_popup .nav a.next:after     { content: '>';
+                                        color: #304071;
+                                        font: 20px "CenturyGothicRegular";
+                                        position: absolute;
+                                        right: -20px;
+                                        top: 0;}
+
+@media (max-width: 1600px) {
+    .floor_popup                    { width: 80%;}
+}
