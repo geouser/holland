@@ -231,7 +231,13 @@ h2                          {   font-family: "CenturyGothicRegular";
 /* --------------------------------------
    Offer
    -------------------------------------- */
-.offer            {    position: relative; min-height: 650px;}
+.offer            {    position: relative; min-height: 650px;
+                       background-position: 50% 50%;
+                       background-repeat: no-repeat;
+                       -webkit-background-size: cover;
+                            -o-background-size: cover;
+                               background-size: cover;
+                  }
 .logo             {
                       position: absolute;
                       top: 60px;
