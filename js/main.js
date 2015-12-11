@@ -145,7 +145,7 @@ $('#gmap').height( $(window).height() * 0.8 );
 
 
 
-  $('.gallery').magnificPopup({
+/*  $('.gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
     overflowY: 'auto',
@@ -165,7 +165,7 @@ $('#gmap').height( $(window).height() * 0.8 );
       }
     }
   });
-
+*/
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
@@ -187,10 +187,31 @@ $('#gmap').height( $(window).height() * 0.8 );
     dots: true
   });
 
+
+
+
   $('.history_slider').slick({
     arrows: false,
     dots: true
   });
+
+  $('.history_slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    console.log(currentSlide);
+    var allA = $('.gallery').find('a');
+    allA.removeClass('active');
+
+    var curFoto = $('.gallery').find('a[data-slide=' + currentSlide + ']');
+    curFoto.addClass('active');
+  });
+
+  $('.gallery a').on('click', function(event) {
+    event.preventDefault();
+    $('.history_slider').slick( 'slickGoTo', $(this).attr('data-slide') );
+  });
+
+
+
+
 
   $('.location_slider').slick({
     arrows: false,
