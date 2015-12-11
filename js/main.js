@@ -65,9 +65,9 @@ jQuery(document).ready(function($) {
       fillOpacity: 0.5,
       stroke: false
     });
-    $('img[usemap]').rwdImageMaps();  
   }
 
+$('img[usemap]').rwdImageMaps();  
 
 $('.offer h1').css('opacity', '1');
 $('.slideInfo').css('opacity', '1');

@@ -1724,3 +1724,9 @@ strong                              { font-family: 'CenturyGothic-Bold';}
     .ap_info_square p               { font-size: 20px;}
     .floor_popup .nav               { padding-top: 20px;}
 }
+
+.mapH {
+            height: auto;
+        max-width: 100%;
+        width: auto;
+}
