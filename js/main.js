@@ -368,12 +368,13 @@ $('nav a, .scrollDown').click(function(){
   });
 
 
-  
+
 function fullpage() {
       $('body').css('overflow', 'hidden');
       var divs = $('.section');
       var dir = 'up'; // wheel scroll direction
       var div = 0; // current div
+
       $(document.body).on('DOMMouseScroll mousewheel', function (e) {
           if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
               dir = 'down';
@@ -406,7 +407,7 @@ function fullpage() {
 
   };
 
-  if (fullHeight && $(window).width() > 1300 && $(window).height() > 650  ) {
+  if (fullHeight && $(window).width() > 1340 && $(window).height() > 650  ) {
     fullpage();
   };
 
