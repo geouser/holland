@@ -58,13 +58,16 @@ if (params.isMobile) {
 
 jQuery(document).ready(function($) {
 
-$('.mapH').maphilight({
-  fill: true,
-  fillColor: 'ffffff',
-  fillOpacity: 0.5,
-  stroke: false
-});
-$('img[usemap]').rwdImageMaps();
+  function imageMap(){
+    $('.mapH').maphilight({
+      fill: true,
+      fillColor: 'ffffff',
+      fillOpacity: 0.5,
+      stroke: false
+    });
+    $('img[usemap]').rwdImageMaps();  
+  }
+
 
 $('.offer h1').css('opacity', '1');
 $('.slideInfo').css('opacity', '1');
@@ -136,6 +139,9 @@ $(".slideNav li").click(function(e){
     callbacks: {
       open: function() {
         $('.mini-slider').get(0).slick.setPosition();
+
+        // function for image maps in popups
+        imageMap();
       }
     }
   });
