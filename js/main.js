@@ -139,7 +139,7 @@ $('.apartment').mouseenter(function() {
         thisHovered.css('width', '58%').addClass('visible').removeClass('hid').siblings().removeClass('visible').addClass('hid');
         thisHovered.siblings('.apartment').css('width', '21%');
         if (thisHovered.hasClass('visible')) {
-          $(thisHovered).find('.apartmentInfoWrap ul').fadeIn('slow');
+          $(thisHovered).find('.apartmentInfoWrap ul').delay("fast").fadeIn('slow');
           $(thisHovered).siblings().find('.apartmentInfoWrap ul').fadeOut('fast')
         } 
     }, 300);

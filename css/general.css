@@ -49,6 +49,11 @@
                      background-position: 100% 50%;
                      background-size: 100%;
                  }
+
+.table                      { width: 100%; height: 100%; display: table; table-layout: fixed;}
+.apartment                  { }
+
+
 .chooseApart:after {
     content: "";
     display: block;
@@ -82,15 +87,17 @@
 .chooseApartTitle               {top: 60px;}
 }
 .apartment       {
-                     float: left;
-                     height: 100%;
+                     display: table-cell; 
+                     height: 100%; 
+                     vertical-align: middle;
+                      float: none;
                      position: relative;
                      text-align: center;
-                     -webkit-transition: all ease-out .6s;
-                     -moz-transition: all ease-out .6s;
-                     -ms-transition: all ease-out .6s;
-                     -o-transition: all ease-out .6s;
-                     transition: all ease-out .6s;
+                     -webkit-transition: all ease .7s;
+                     -moz-transition: all ease .7s;
+                     -ms-transition: all ease .7s;
+                     -o-transition: all ease .7s;
+                     transition: all ease .7s;
                      width: 21%;
                      overflow: hidden;
                      z-index: 3;
@@ -279,7 +286,7 @@ span.apartTip                       {   display: block;
 @media (max-width: 900px) {
     .chooseApart          {min-height: auto; height: auto;}
     .chooseApart .ornLine {display: none;}
-    .apartment            {width: 100% !important; height: 600px; border: 0;}
+    .apartment            {display: block; width: 100% !important; height: 600px; border: 0;}
     .chooseApartTitle     {height: 50px; line-height: 50px; font-size: 32px;}
 }
 @media (max-width: 600px) {
@@ -1766,8 +1773,3 @@ img[usemap]                         { border: none;
 }
 
 .floorInfo {display: none;}
-
-
-
-.table                      { width: 100%; height: 100%; display: table; table-layout: fixed;}
-.apartment                  { display: table-cell; height: 100%; vertical-align: middle; float: none;}
