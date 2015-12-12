@@ -148,15 +148,6 @@ $('.apartment').mouseenter(function() {
 });
 
 
-
-
-$('.offerSlider').slick({
-  fade: true,
-  arrows: false,
-  dots: false
-});
-
-
   function miniSlider(){
     $('.mini-slider').slick({
       arrows: false,
