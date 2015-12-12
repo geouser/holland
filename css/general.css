@@ -1764,3 +1764,5 @@ img[usemap]                         { border: none;
     .floor_popup .nav a:before,
     .floor_popup .nav a:after       { display: none;}
 }
+
+.floorInfo {display: none;}

@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
       $(this).mapster('highlight');
 
       var floorNum = $(this).parent('map').attr('floor');        /* номер этажа */
-      var apId = $(this).attr('id');
+      var apId = $(this).attr('apId');
       var apInfoBlock = $('.floorInfo-' + floorNum).children('.apInfo-' + apId);    /* блок с инф соответсвующий id area */
       var apArea = apInfoBlock.children('.num-area').text();     /* площадь */
       var apInfo = apInfoBlock.children('p').text();             /* информация о квартире */
@@ -106,7 +106,6 @@ jQuery(document).ready(function($) {
       $('.ap_info_text').text(apInfo);   /* вывод информации о квартире */
       $('.areaNum').text(apArea);        /* вывод площади */
 
-    console.log(floorNum);
 
     });
     $('area').on('mouseleave', function(event) {
