@@ -57,69 +57,23 @@ if (params.isMobile) {
 
 
 jQuery(document).ready(function($) {
-
-  function imageMap(){
-    /*$('.mapH').maphilight({
-      fill: true,
-      fillColor: 'ffffff',
-      fillOpacity: 0.5,
-      stroke: false
-    });
-    $('img[usemap]').rwdImageMaps(); */
-    $('.mapH').mapster({
-      highlight: true,
-       stroke: false,
-        fillColor: '222222',
-        render_highlight: {
-            fillOpacity: 0.5,
-            fillColor: 'ffffff',
-        },
-
-       isSelectable: false,
-       singleSelect: true,
-       clickNavigate: true,
-       /*mapKey: 'data-mapster-key',
-        areas: [
-        {
-            key: 'free',
-            isSelectable: true,
-        },
-        {
-            key: 'sold',
-            isSelectable: false,
-            fillColor: '222222',
-        }]*/
-     });
-
-    $('area').on('mouseenter click touch', function(event) {
-      event.preventDefault();
-      $('.mapH').mapster('highlight',false)
-      $(this).mapster('highlight');
-
-      var houseName = $(this).parent('map').attr('house');       /* название здания */
-      var floorNum =  $(this).parent('map').attr('floor');        /* номер этажа */
-      var apId =      $(this).attr('apId');
-      var apInfoBlock = $('.floorInfo-' + houseName + '-' + floorNum).children('.apInfo-' + apId);    /* блок с инф соответсвующий id area */
-      var apArea = apInfoBlock.children('.num-area').text();     /* площадь */
-      var apInfo = apInfoBlock.children('p').text();             /* информация о квартире */
-
-      $('.apartNum').text(apId);         /* вывод номера квартиры квартире */
-      $('.ap_info_text').text(apInfo);   /* вывод информации о квартире */
-      $('.areaNum').text(apArea);        /* вывод площади */
-
-
-    });
-    $('area').on('mouseleave', function(event) {
-      event.preventDefault();
-      $('.mapH').mapster('highlight',false)
-    });
-
-    $(window).resize(function(event) {
-      $('.mapH').mapster('resize', $('.map_area').width(), 0, 0); 
-    });
-    
-  }
   
+  $('polygon').on('mouseenter click touch', function(event) {
+    event.preventDefault();
+    /*$('.mapH').mapster('highlight',false)
+    $(this).mapster('highlight');*/
+
+    var houseName = $(this).parent('svg').attr('house');       /* название здания */
+    var floorNum =  $(this).parent('svg').attr('floor');        /* номер этажа */
+    var apId =      $(this).attr('apId');
+    var apInfoBlock = $('.floorInfo-' + houseName + '-' + floorNum).children('.apInfo-' + apId);    /* блок с инф соответсвующий id area */
+    var apArea = apInfoBlock.children('.num-area').text();     /* площадь */
+    var apInfo = apInfoBlock.children('p').text();             /* информация о квартире */
+
+    $('.apartNum').text(apId);         /* вывод номера квартиры квартире */
+    $('.ap_info_text').text(apInfo);   /* вывод информации о квартире */
+    $('.areaNum').text(apArea);        /* вывод площади */
+  });
   
 
 $('.offer h1').css('opacity', '1');
@@ -187,14 +141,22 @@ $(".slideNav li").click(function(e){
       open: function() {
         $('.mini-slider').slick('unslick')
         miniSlider();
-
-        // function for image maps in popups
-        imageMap();
       }
-    }
-  });
+    } // callbacks
 
-$('#gmap').height( $(window).height() * 0.8 );
+
+  });// end magnific
+
+ /* $('.floor_popup .magnific').on('click', '.selector', function(event) {
+    event.preventDefault();
+    $.magnificPopup.close();
+  });*/
+
+
+
+
+
+  $('#gmap').height( $(window).height() * 0.8 );
   
   $('.magnific-map').magnificPopup({
     type: 'inline',
@@ -214,35 +176,12 @@ $('#gmap').height( $(window).height() * 0.8 );
 
     callbacks: {
       open: function() {
-        console.log('opened');
         googleMap_popup()
       }
     }
   });
 
 
-
-/*  $('.gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    overflowY: 'auto',
-    fixedContentPos: false,
-    fixedBgPos: true,
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'my-mfp-slide-bottom',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function(item) {
-        return item.el.attr('alt');
-      }
-    }
-  });
-*/
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();

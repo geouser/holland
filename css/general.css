@@ -1679,9 +1679,17 @@ strong                              { font-family: 'CenturyGothic-Bold';}
 .popup_body em                      { font-style: italic;}
 
 
-.map_area                           { width: 100%; margin-top: 30px;}
-.map_area img                       { width: 100%;}
-
+.map_area                           { width: 100%; margin-top: 30px; padding-bottom: 38%; position: relative;}
+.map_area img                       { width: 100%; position: absolute; top: 0; left: 0; height: auto;}
+.map_area svg                       { position: absolute; top: 0; left: 0; width: 100%; height: auto;}
+.map_area svg polygon,
+.map_area svg polyline                { opacity: 0;
+                                        -webkit-transition: all 0.3s ease;
+                                        -o-transition: all 0.3s ease;
+                                        transition: all 0.3s ease;
+                                        cursor: pointer;}
+.map_area svg polygon:hover,
+.map_area svg polyline:hover        { opacity: 0.5;}
 
 
 .ap_info                            { display: table;
@@ -1721,10 +1729,7 @@ strong                              { font-family: 'CenturyGothic-Bold';}
                                         right: -20px;
                                         top: 0;}
 
-img[usemap]                         { border: none;
-                                        height: auto;
-                                        max-width: 100%;
-                                        width: auto;}
+
 @media (max-width: 1600px) {
     .floor_popup                    { width: 70%;}
     .popup_header .general h2       { font-size: 22px;}
