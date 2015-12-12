@@ -142,7 +142,7 @@ $('.apartment').mouseenter(function() {
           $(thisHovered).find('.apartmentInfoWrap ul').fadeIn('slow');
           $(thisHovered).siblings().find('.apartmentInfoWrap ul').fadeOut('fast')
         } 
-    }, 100);
+    }, 300);
 }).mouseleave(function() {
     clearTimeout(myTimeout);
 });
