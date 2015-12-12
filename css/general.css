@@ -1769,5 +1769,5 @@ img[usemap]                         { border: none;
 
 
 
-.table                      { width: 100%; height: 100%; display: table;}
+.table                      { width: 100%; height: 100%; display: table; table-layout: fixed;}
 .apartment                  { display: table-cell; height: 100%; vertical-align: middle; float: none;}
