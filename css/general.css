@@ -1218,6 +1218,9 @@ span.apartTip                       {   display: block;
     .processBlockInfo h5            {font-size: 16px;}
     .processBlockInfo ul li:before  {width: 12px; height: 8px;}
 }
+@media (max-width: 1400px) and (max-height: 800px) {
+    .processBlockInfo ul            {height: 130px;}
+}
 @media (min-height: 700px) and (max-width: 1300px)  {   
     .processBlockInfo ul   {height: 180px;}
 }

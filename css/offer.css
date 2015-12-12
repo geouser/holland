@@ -717,6 +717,8 @@ a.place             {    color: #304071;
     .slideInfo             {bottom: 55px;}
     .slideInfoBody p,
     .slideInfoHeader  p    {font-size: 14px; line-height: normal;}
+    .slideNav li           {width: 14px; height: 14px;}
+    .slideInfoBody p, .slideInfoHeader p {margin-bottom: 8px;}
 }
 @media (max-width: 330px) {
     .slideInfo             {bottom: 50px;}
