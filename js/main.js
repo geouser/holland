@@ -190,7 +190,8 @@ $(".slideNav li").click(function(e){
 
 
   function falseHover(el){
-    $(el).toggleClass('hover').siblings().removeClass('hover');
+    $('.false_hover').removeClass('hover');
+    $(el).addClass('hover');
   }
 
   $('.false_hover').on('click', function(event) {
