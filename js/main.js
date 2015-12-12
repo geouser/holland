@@ -96,9 +96,10 @@ jQuery(document).ready(function($) {
       $('.mapH').mapster('highlight',false)
       $(this).mapster('highlight');
 
-      var floorNum = $(this).parent('map').attr('floor');        /* номер этажа */
-      var apId = $(this).attr('apId');
-      var apInfoBlock = $('.floorInfo-' + floorNum).children('.apInfo-' + apId);    /* блок с инф соответсвующий id area */
+      var houseName = $(this).parent('map').attr('house');       /* название здания */
+      var floorNum =  $(this).parent('map').attr('floor');        /* номер этажа */
+      var apId =      $(this).attr('apId');
+      var apInfoBlock = $('.floorInfo-' + houseName + '-' + floorNum).children('.apInfo-' + apId);    /* блок с инф соответсвующий id area */
       var apArea = apInfoBlock.children('.num-area').text();     /* площадь */
       var apInfo = apInfoBlock.children('p').text();             /* информация о квартире */
 
